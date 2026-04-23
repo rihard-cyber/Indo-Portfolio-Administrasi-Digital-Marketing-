@@ -1,0 +1,16 @@
+Folder ini disiapkan untuk menyimpan semua foto yang akan ditampilkan di website Portfolio Anda.
+
+Panduan Penamaan File Foto agar otomatis terhubung (jika Anda mengikuti panduan di `index.html`):
+1. Foto Profil          -> letakkan dengan nama: foto-profil.jpg
+2. Foto Pengalaman      -> letakkan dengan nama: pengalaman-1.jpg, pengalaman-2.jpg, dll (sesuai yang di index.html)
+
+Untuk Sertifikat, pastikan nama filenya persis seperti di bawah ini dan diletakkan di dalam folder `images`:
+1. Sertifikat Microsoft Office              -> Sertificate Microsoft Office.jpg
+2. Certified Public Speaking (CPS)          -> Certified Public Speaking (CPS).jpeg
+3. Sertifikat Digital Marketing Copywriting -> Sertificate Digital Marketing Copywriting.jpg
+4. Microsoft Office Admin Kantor            -> Microsoft Office Admin Kantor.jpg
+5. Sertifikat Ijazah Gada Pratama           -> Sertificate Ijazah Gada Pratama.jpg
+6. Sertifikat Beladiri Ijazah Karate        -> Sertificate Beladiri Ijazah Karate.jpg
+7. Sertifikasi BNSP Digital Marketing       -> Sertifikasi BNSP Digital Marketing.jpg
+
+*(Catatan: Pastikan format file (.jpg atau .jpeg) sesuai dengan petunjuk di atas, agar foto otomatis tampil di website).*

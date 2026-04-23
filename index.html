@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Patung Landu Meha - Portfolio</title>
+    <meta name="description" content="Portfolio of Richard Patung Landu Meha - Administration Office Professional.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons (for modern icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Custom Cursor & Scroll Progress -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Richard P. <span>L. Meha</span></a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#experience" class="nav-link">Pengalaman</a>
+                <a href="#education" class="nav-link">Akademik</a>
+                <a href="#skills" class="nav-link">Keahlian & Sertifikat</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+                <button id="theme-toggle" class="theme-btn" title="Ganti Tema">
+                    <i class="ph ph-moon"></i>
+                </button>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text fade-in-up">
+                <p class="greeting">Halo, saya</p>
+                <h1 class="name">Richard Patung Landu Meha</h1>
+                <h2 class="role">Administrasi Office & Digital Marketing Professional</h2>
+                <p class="summary">Profesional multitalenta dengan keahlian unggul dalam administrasi operasional.
+                    Tersertifikasi resmi BNSP sebagai <strong>Digital Marketer</strong> yang ahli merancang strategi
+                    pemasaran modern, SEO, copywriting persuasif, dan optimasi konversi.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+                    <a href="#experience" class="btn btn-secondary">Lihat Pengalaman</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-up delay-1">
+                <div class="glass-card hero-stats"
+                    onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})"
+                    style="cursor: pointer;">
+                    <div class="stat">
+                        <i class="ph-fill ph-briefcase"></i>
+                        <h3 id="stat-experience" data-label="+ Tahun">7+ Tahun</h3>
+                        <p>Pengalaman Kerja</p>
+                    </div>
+                </div>
+                <div class="glass-card hero-stats"
+                    onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})"
+                    style="cursor: pointer;">
+                    <div class="stat">
+                        <i class="ph-fill ph-users"></i>
+                        <h3>150+</h3>
+                        <p>Personel Dikoordinir</p>
+                    </div>
+                </div>
+                <div class="glass-card hero-stats"
+                    onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})"
+                    style="cursor: pointer;">
+                    <div class="stat">
+                        <i class="ph-fill ph-certificate"></i>
+                        <h3 id="stat-certificates">6+</h3>
+                        <p>Sertifikat Keahlian</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="glow-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Tentang Saya</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-grid fade-in-up">
+                <div class="about-photo glass-panel">
+                    <img src="images/foto-profil.jpg" alt="Foto Profil" class="profile-img" style="cursor:pointer;"
+                        data-gallery="images/foto-profil.jpg,images/foto-profil-2.jpg,images/foto-profil-3.jpg,images/foto-profil-4.mp4"><br>
+                    <p style="text-align:center; font-size:0.8rem; margin-top:10px; color:var(--text-secondary);"></p>
+                </div>
+                <div class=" about-text glass-panel">
+                    <p>Saya merupakan seorang profesional di bidang <strong>Administrasi Office</strong> dengan
+                        kemampuan handal dalam pengelolaan operasional harian, pengaturan agenda kerja, database
+                        karyawan, serta penyusunan laporan manajemen yang komprehensif.</p>
+                    <p>Selain keahlian administratif, saya adalah seorang <strong>Digital Marketer Tersertifikasi
+                            BNSP</strong> yang <em>passionate</em> di dunia pemasaran digital. Saya ahli meracik
+                        strategi pemasaran inovatif menggabungkan <strong>SEO</strong>, <em>copywriting</em> memikat,
+                        serta kampanye media sosial yang terstruktur. Pendekatan saya selalu berbasis data untuk
+                        mengoptimalkan jangkauan pasar dan meningkatkan konversi.</p>
+                    <p>Fokus utama saya adalah mengkombinasikan efisiensi manajerial perkantoran dengan kekuatan
+                        strategi digital guna menciptakan ekosistem kerja yang produktif, sekaligus membawa pertumbuhan
+                        brand bagi perusahaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Pengalaman Profesional</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline">
+                <!-- Job 3 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="job-photo">
+                            <img src="images/pengalaman3-1.jpg"
+                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Foto+Kegiatan/Bekerja'"
+                                alt="Kegiatan" class="exp-img"
+                                data-gallery="images/pengalaman3-1.jpg,images/pengalaman3-2.jpg,images/pengalaman3-3.jpg,images/pengalaman3-4.jpg,images/pengalaman3-5.mp4,images/pengalaman3-6.mp4">
+                        </div>
+                        <span class="timeline-date">2021 - 2026</span>
+                        <h3 class="job-title">Administrasi Divisi Satpam</h3>
+                        <h4 class="company">PT. Provices Indonesia - Kementerian Perdagangan RI</h4>
+                        <ul class="job-duties">
+                            <li>Mengelola administrasi operasional dan kepegawaian meliputi pengendalian data personel,
+                                pengarsipan dokumen, serta pemutakhiran database secara terstruktur.</li>
+                            <li>Menyusun jadwal kerja operasional, monitoring pekerjaan, dan memastikan kegiatan efektif
+                                sesuai standar organisasi.</li>
+                            <li>Mengelola absensi, timesheet, dan administrasi penggajian sebagai dasar kontrol
+                                kehadiran/pembayaran.</li>
+                            <li>Menyusun laporan operasional dan administrasi berkala untuk bahan evaluasi manajemen.
+                            </li>
+                            <li>Melakukan koordinasi dan monitoring kinerja ±150 personel yang tersebar di 10 gedung
+                                operasional.</li>
+                            <li>Mengelola administrasi kebutuhan operasional, permintaan barang, dan pengendalian
+                                dokumentasi.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="job-photo">
+                            <img src="images/pengalaman2-1.jpg"
+                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Foto+Kegiatan/Bekerja'"
+                                alt="Kegiatan" class="exp-img"
+                                data-gallery="images/pengalaman2-1.jpg,images/pengalaman2-2.jpg,images/pengalaman2-3.jpg,images/pengalaman2-4.jpg,images/pengalaman2-5.mp4,images/pengalaman2-6.mp4">
+                        </div>
+                        <span class="timeline-date">2019 - 2021</span>
+                        <h3 class="job-title">Administrasi Divisi Satpam</h3>
+                        <h4 class="company">PT. Provices Indonesia - Apartemen The Wave, Jaksel</h4>
+                        <ul class="job-duties">
+                            <li>Mengelola administrasi operasional, kepegawaian, pengarsipan dokumen, serta database
+                                personel.</li>
+                            <li>Menyusun jadwal operasional, rekap absensi, timesheet, dan penggajian karyawan.</li>
+                            <li>Melakukan penyusunan laporan berkala sebagai bahan evaluasi dan pelaporan kepada
+                                User/Manajemen.</li>
+                            <li>Memproses permintaan barang dan mengendalikan dokumentasi secara tertib.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 1 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <div class="job-photo">
+                            <img src="images/pengalaman1-1.jpg"
+                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Foto+Kegiatan/Bekerja'"
+                                alt="Kegiatan" class="exp-img"
+                                data-gallery="images/pengalaman1-1.jpg,images/pengalaman1-2.jpg,images/pengalaman1-3.jpg,images/pengalaman1-4.jpg,images/pengalaman1-5.mp4,images/pengalaman1-6.mp4">
+                        </div>
+                        <span class="timeline-date">2018 - 2019</span>
+                        <h3 class="job-title">Anggota Security</h3>
+                        <h4 class="company">PT. Uremessing Guard - Departement 18th Rasuna Said, Jaksel</h4>
+                        <ul class="job-duties">
+                            <li>Melaksanakan pengamanan area gedung dan penjagaan akses masuk serta penerimaan tamu.
+                            </li>
+                            <li>Melaksanakan patroli rutin dan pengecekan area operasional.</li>
+                            <li>Melakukan monitoring aktivitas lingkungan kerja dan pencegahan potensi gangguan.</li>
+                            <li>Menyusun laporan kegiatan pengamanan melalui WhatsApp Group untuk pimpinan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Riwayat Akademik</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="education-card glass-panel fade-in-up">
+                <div class="edu-header">
+                    <i class="ph-fill ph-graduation-cap edu-icon"></i>
+                    <div>
+                        <h3 class="degree">Sarjana Ekonomi Syariah (S.E.)</h3>
+                        <h4 class="university">Sekolah Tinggi Ekonomi dan Bisnis Islam (STEBIS) Nur Ilmi Al-Ismailiyun
+                        </h4>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <span class="edu-date"><i class="ph ph-calendar-blank"></i> 2021 - 2024</span>
+                    <span class="edu-gpa"><i class="ph ph-star"></i> IPK: 3.8</span>
+                </div>
+                <div class="edu-courses">
+                    <strong>Mata kuliah relevan:</strong>
+                    <div class="pill-container">
+                        <span class="pill">Administrasi</span>
+                        <span class="pill">Manajemen</span>
+                        <span class="pill">Operasional</span>
+                        <span class="pill">Akuntansi Dasar</span>
+                        <span class="pill">Komunikasi Bisnis</span>
+                    </div>
+                </div>
+                <div class="edu-photo" style="margin-top: 30px; border-radius: 12px; overflow: hidden;">
+                    <img src="images/akademik-1.jpg"
+                        onerror="this.src='https://placehold.co/800x300/1F2937/06B6D4?text=Foto+Kegiatan+Akademik'"
+                        alt="Foto Akademik" class="edu-img"
+                        style="width:100%; height:300px; object-fit:cover; display:block; cursor:pointer;"
+                        data-gallery="images/akademik-1.jpg,images/akademik-2.jpg,images/akademik-3.jpg,images/akademik-4.jpg,images/akademik-5.mp4,images/akademik-6.mp4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certificates Section -->
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Sertifikat & Keahlian</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="certifications-grid">
+                <!-- Cert 1 (2026) -->
+                <div class="cert-card glass-card fade-in-up">
+                    <div class="cert-photo">
+                        <img src="images/Certified Public Speaking (CPS)-1.jpeg" alt="Certified Public Speaking (CPS)"
+                            class="cert-img"
+                            data-gallery="images/Certified Public Speaking (CPS)-1.jpeg,images/Certified Public Speaking (CPS)-2.jpeg,images/Certified Public Speaking (CPS)-3.jpeg,images/Certified Public Speaking (CPS)-4.jpeg,images/Certified Public Speaking (CPS)-5.mp4,images/Certified Public Speaking (CPS)-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-megaphone"></i></div>
+                    <span class="cert-year">2026</span>
+                    <h3>Certified Public Speaking (CPS)</h3>
+                    <p class="cert-issuer">LKP WellldoneSkills Nawara Pratama</p>
+                    <p class="cert-desc">Public Speaking Fundamental, Teknik Komunikasi Efektif, Penguasaan Panggung,
+                        Body Language, Vocal Power, dan Presentation Skill.</p>
+                </div>
+                <!-- Cert 2 (2026) -->
+                <div class="cert-card glass-card fade-in-up delay-1">
+                    <div class="cert-photo">
+                        <img src="images/BNSP Digital Marketing Certification-1.jpeg"
+                            alt="Sertifikasi BNSP Digital Marketing" class="cert-img"
+                            data-gallery="images/BNSP Digital Marketing Certification-1.jpeg,images/BNSP Digital Marketing Certification-2.jpeg,images/BNSP Digital Marketing Certification-3.jpeg,images/BNSP Digital Marketing Certification-4.jpeg,images/BNSP Digital Marketing Certification-5.mp4,images/BNSP Digital Marketing Certification-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-rocket-launch"></i></div>
+                    <span class="cert-year">2026</span>
+                    <h3>Sertifikasi BNSP Digital Marketing</h3>
+                    <p class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
+                    <p class="cert-desc">Strategi Pemasaran Digital Komprehensif, SEO/SEM, Social Media Management,
+                        Analytics, Copywriting Persuasif, dan Optimasi Campaign Berbasis Konversi.</p>
+                </div>
+                <!-- Cert 3 (2024) -->
+                <div class="cert-card glass-card fade-in-up delay-2">
+                    <div class="cert-photo">
+                        <img src="images/Sertificate Microsoft Office-1.jpeg" alt="Sertifikat Microsoft Office"
+                            class="cert-img"
+                            data-gallery="images/Sertificate Microsoft Office-1.jpeg,images/Sertificate Microsoft Office-2.jpeg,images/Sertificate Microsoft Office-3.jpeg,images/Sertificate Microsoft Office-4.jpeg,images/Sertificate Microsoft Office-5.mp4,images/Sertificate Microsoft Office-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-microsoft-word-logo"></i></div>
+                    <span class="cert-year">2024</span>
+                    <h3>Sertificate Microsoft Office</h3>
+                    <p class="cert-issuer">LKP Borju Digital & Kursus Digital</p>
+                    <p class="cert-desc">Data Management, Administrative Reporting, Professional Documentation,
+                        Presentation Development, & Digital Office Operations.</p>
+                </div>
+                <!-- Cert 4 (2024) -->
+                <div class="cert-card glass-card fade-in-up">
+                    <div class="cert-photo">
+                        <img src="images/Sertificate Digital Marketing Copywriting-1.jpeg"
+                            alt="Sertifikat Digital Marketing: Copywriting" class="cert-img"
+                            data-gallery="images/Sertificate Digital Marketing Copywriting-1.jpeg,images/Sertificate Digital Marketing Copywriting-2.jpeg,images/Sertificate Digital Marketing Copywriting-3.jpeg,images/Sertificate Digital Marketing Copywriting-4.jpeg,images/Sertificate Digital Marketing Copywriting-5.mp4,images/Sertificate Digital Marketing Copywriting-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-pen-nib"></i></div>
+                    <span class="cert-year">2024</span>
+                    <h3>Sertificate Digital Marketing: Copywriting</h3>
+                    <p class="cert-issuer">Belajar Skill</p>
+                    <p class="cert-desc">Copywriting, Content Writing, SEO Basic, Social Media Marketing, Pembuatan
+                        Konten Promosi, Strategi Branding, & Digital Campaign.</p>
+                </div>
+                <!-- Cert 5 (2021) -->
+                <div class="cert-card glass-card fade-in-up delay-1">
+                    <div class="cert-photo">
+                        <img src="images/Microsoft Office Admin Kantor-1.jpeg" alt="Microsoft Office Admin Kantor"
+                            class="cert-img"
+                            data-gallery="images/Microsoft Office Admin Kantor-1.jpeg,images/Microsoft Office Admin Kantor-2.jpeg,images/Microsoft Office Admin Kantor-3.jpeg,images/Microsoft Office Admin Kantor-4.jpeg,images/Microsoft Office Admin Kantor-5.mp4,images/Microsoft Office Admin Kantor-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-desktop"></i></div>
+                    <span class="cert-year">2021</span>
+                    <h3>Microsoft Office Admin Kantor</h3>
+                    <p class="cert-issuer">Sans Smart</p>
+                    <p class="cert-desc">Administrasi Perkantoran, Pengolahan Data Excel, Surat & Dokumen, Arsip
+                        Digital, Laporan, & Google Workspace.</p>
+                </div>
+                <!-- Cert 6 (2020) -->
+                <div class="cert-card glass-card fade-in-up delay-2">
+                    <div class="cert-photo">
+                        <img src="images/Sertifikat Beladiri Ijazah Karate-1.jpeg"
+                            alt="Sertifikat Beladiri Ijazah Karate" class="cert-img"
+                            data-gallery="images/Sertifikat Beladiri Ijazah Karate-1.jpeg,images/Sertifikat Beladiri Ijazah Karate-2.jpeg,images/Sertifikat Beladiri Ijazah Karate-3.jpeg,images/Sertifikat Beladiri Ijazah Karate-4.jpeg,images/Sertifikat Beladiri Ijazah Karate-5.mp4,images/Sertifikat Beladiri Ijazah Karate-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-shield-chevron"></i></div>
+                    <span class="cert-year">2020</span>
+                    <h3>Sertificate Beladiri Ijazah Karate</h3>
+                    <p class="cert-issuer">PT. Provices Group</p>
+                    <p class="cert-desc">Teknik Pertahanan Diri, Ketahanan Fisik & Mental, Refleks, & Manajemen Konflik
+                        Dasar Cepat.</p>
+                </div>
+                <!-- Cert 7 (2019) -->
+                <div class="cert-card glass-card fade-in-up">
+                    <div class="cert-photo">
+                        <img src="images/Sertifikat Ijazah Gada Pratama-1.jpeg" alt="Sertifikat Ijazah Gada Pratama"
+                            class="cert-img"
+                            data-gallery="images/Sertifikat Ijazah Gada Pratama-1.jpeg,images/Sertifikat Ijazah Gada Pratama-2.jpeg,images/Sertifikat Ijazah Gada Pratama-3.jpeg,images/Sertifikat Ijazah Gada Pratama-4.jpeg,images/Sertifikat Ijazah Gada Pratama-5.mp4,images/Sertifikat Ijazah Gada Pratama-6.mp4">
+                    </div>
+                    <div class="cert-icon"><i class="ph ph-shield-check"></i></div>
+                    <span class="cert-year">2019</span>
+                    <h3>Sertificate Ijazah Gada Pratama</h3>
+                    <p class="cert-issuer">PT. Evan Putra Jaya</p>
+                    <p class="cert-desc">Dasar Pengamanan, Prosedur Keamanan, Akses Tamu, Problem Solving Lapangan,
+                        Kerja Sama Tim, Disiplin & SOP.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Hubungi Saya</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in-up">
+                    <div class="contact-item glass-panel"
+                        onclick="window.open('https://maps.google.com/?q=Jl.+Babelan,+Kel.+Bahagia,+Bekasi,+Jawa+Barat', '_blank')"
+                        style="cursor: pointer;">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Babelan, Kel. Bahagia, Bekasi, Jawa Barat</p>
+                        </div>
+                    </div>
+                    <div class="contact-item glass-panel" onclick="window.open('https://wa.me/6285888102696', '_blank')"
+                        style="cursor: pointer;">
+                        <i class="ph-fill ph-whatsapp-logo"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 858-8810-2696</p>
+                        </div>
+                    </div>
+                    <div class="contact-item glass-panel"
+                        onclick="window.location.href='mailto:richardpl.meha@gmail.com'" style="cursor: pointer;">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:richardpl.meha@gmail.com"
+                                    onclick="event.stopPropagation()">richardpl.meha@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item glass-panel"
+                        onclick="window.open('https://www.linkedin.com/in/richard-patung-landu-meha-9099a3259', '_blank')"
+                        style="cursor: pointer;">
+                        <i class="ph-fill ph-linkedin-logo"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/richard-patung-landu-meha-9099a3259" target="_blank"
+                                    onclick="event.stopPropagation()">linkedin.com/in/richard-patung-landu-meha</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Richard Patung Landu Meha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image/Video Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="image-modal-close" id="modalClose">&times;</span>
+        <div class="modal-nav prev" id="modalPrev"><i class="ph ph-caret-left"></i></div>
+        <div id="modalMediaContainer"
+            style="display:flex; justify-content:center; align-items:center; width:100%; height:100%; position:relative;">
+            <img class="image-modal-content" id="modalImage" alt="Full View">
+            <video class="image-modal-content" id="modalVideo" controls autoplay
+                style="display:none; outline:none; max-width:90%; max-height:85vh; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.5);"></video>
+        </div>
+        <div class="modal-nav next" id="modalNext"><i class="ph ph-caret-right"></i></div>
+        <div class="modal-counter" id="modalCounter"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html> HASIL DARI KEGILAAN YANG HAKIKI
