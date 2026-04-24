@@ -830,6 +830,10 @@ h1:hover, h2:hover, h3:hover, h4:hover, .nav-link:hover, .logo:hover, p strong:h
 }
 
 @media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
     .nav-links {
         position: fixed;
         top: 80px;
@@ -879,6 +883,10 @@ h1:hover, h2:hover, h3:hover, h4:hover, .nav-link:hover, .logo:hover, p strong:h
 }
 
 @media screen and (max-width: 480px) {
+    .section {
+        padding: 40px 0;
+    }
+
     .hero-text .name {
         font-size: 2.5rem;
     }
@@ -1199,4 +1207,36 @@ h1:hover, h2:hover, h3:hover, h4:hover, .nav-link:hover, .logo:hover, p strong:h
 
 .exp-img:hover, .edu-img:hover {
     transform: scale(1.02);
+}
+
+/* ===== Disable sticky hover effects on mobile (Touch Devices) ===== */
+@media (hover: none) and (pointer: coarse) {
+    .glass-card:hover {
+        transform: none;
+        border-color: var(--glass-border);
+        box-shadow: none;
+    }
+    .timeline-item:hover .timeline-dot {
+        transform: none;
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+        background: var(--bg-main);
+    }
+    .contact-item:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: var(--glass-border);
+    }
+    .contact-item:hover i {
+        transform: none;
+        text-shadow: none;
+    }
+    .pill:hover {
+        transform: none;
+    }
+    .btn:hover {
+        transform: none;
+    }
+    .exp-img:hover, .edu-img:hover {
+        transform: none;
+    }
 }

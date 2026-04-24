@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in, .fade-in-up');
     animatedElements.forEach(el => observer.observe(el));
 
-    // Initialize VanillaTilt for 3D card effects
-    if (typeof VanillaTilt !== 'undefined') {
+    // Initialize VanillaTilt for 3D card effects (Only on Desktop)
+    if (typeof VanillaTilt !== 'undefined' && window.innerWidth >= 992) {
         VanillaTilt.init(document.querySelectorAll(".glass-card, .glass-panel, .about-photo"), {
             max: 5,
             speed: 400,
