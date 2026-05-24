@@ -298,17 +298,22 @@
         /* Media Cetak (Print) */
         @media print {
             body {
-                background-color: #ffffff;
+                background-color: var(--bg-canvas) !important;
                 padding: 0;
-                color: #000000;
+                color: var(--text-primary) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .cv-paper {
+                background-color: var(--bg-paper) !important;
                 box-shadow: none;
-                padding: 0;
+                padding: 30px 40px;
                 width: 100%;
                 max-width: 100%;
                 min-height: auto;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .action-bar {
@@ -316,29 +321,35 @@
             }
 
             :root {
-                --bg-canvas: #ffffff;
+                --bg-canvas: #cad5e2;
                 --bg-paper: #ffffff;
-                --text-primary: #000000;
-                --text-secondary: #333333;
+                --text-primary: #1a1a1a;
+                --text-secondary: #4a5568;
                 --accent-color: #1d4e89;
-                --badge-bg: #f1f5f9;
-                --badge-text: #000000;
-                --border-color: #000000;
+                --badge-bg: #e2e8f0;
+                --badge-text: #1d4e89;
+                --border-color: #1a1a1a;
             }
 
             .highlight-bar {
-                background-color: #f8fafc !important;
-                border-left-color: #1d4e89 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%) !important;
+                border-left-color: var(--accent-color) !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .badge {
-                background-color: #f1f5f9 !important;
-                color: #1d4e89 !important;
+                background-color: var(--badge-bg) !important;
+                color: var(--badge-text) !important;
                 border: 1px solid #cbd5e1 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .checkmark {
+                color: #16a34a !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
         }
     </style>
