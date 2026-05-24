@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Patung Landu Meha — CV ATS</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        :root {
+            --bg-canvas: #cad5e2;
+            --bg-paper: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #404040;
+            --accent-color: #1d4e89; /* Biru tua seperti gambar */
+            --accent-light: #0e6ba8;
+            --border-color: #1a1a1a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-primary);
+            line-height: 1.4;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container Kertas CV */
+        .cv-paper {
+            background-color: var(--bg-paper);
+            width: 100%;
+            max-width: 800px;
+            min-height: 1050px;
+            padding: 40px 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        /* Tombol Aksi */
+        .action-bar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-action:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #333333;
+        }
+
+        .btn-secondary:hover {
+            background-color: #555555;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            word-wrap: break-word;
+        }
+
+        .divider-double {
+            border-top: 3px double var(--border-color);
+            margin: 10px 0 15px 0;
+        }
+
+        /* Ringkasan */
+        .summary-text {
+            font-size: 0.85rem;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        /* Section Layout */
+        section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            border-bottom: 1.5px solid var(--border-color);
+            padding-bottom: 2px;
+        }
+
+        /* Detail Pekerjaan & Pendidikan */
+        .item-header {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            border-bottom: 0.5px solid #dddddd;
+            padding-bottom: 2px;
+        }
+
+        ul.bullets {
+            margin-left: 20px;
+            margin-bottom: 12px;
+            font-size: 0.82rem;
+            color: var(--text-primary);
+        }
+
+        ul.bullets li {
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+
+        /* Item Sertifikat */
+        .cert-item {
+            margin-bottom: 10px;
+            font-size: 0.82rem;
+        }
+
+        .cert-title-year {
+            font-weight: 700;
+        }
+
+        .cert-issuer {
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        /* Mata Kuliah */
+        .checkmark {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-right: 3px;
+        }
+
+        /* Tabel Informasi Kontak (Bagian Bawah) */
+        .footer-info {
+            font-size: 0.8rem;
+            border-top: 1.5px solid var(--border-color);
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+
+        .footer-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .footer-info td {
+            padding: 3px 0;
+            vertical-align: top;
+        }
+
+        .footer-info td.label {
+            width: 100px;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        /* Media Cetak (Print) */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+                color: #000000;
+            }
+
+            .cv-paper {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+                min-height: auto;
+            }
+
+            .action-bar {
+                display: none !important;
+            }
+
+            :root {
+                --bg-canvas: #ffffff;
+                --bg-paper: #ffffff;
+                --text-primary: #000000;
+                --text-secondary: #222222;
+                --accent-color: #000000;
+                --border-color: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tombol Navigasi Bawaan -->
+    <div class="action-bar">
+        <a href="index.html" class="btn-action btn-secondary"><i class="ph ph-arrow-left"></i> Kembali ke Portofolio</a>
+        <button onclick="window.print()" class="btn-action"><i class="ph ph-printer"></i> Cetak / Simpan PDF</button>
+    </div>
+
+    <!-- Dokumen CV -->
+    <div class="cv-paper">
+        <header>
+            <h1 class="name">Richard Patung Landu Meha</h1>
+            <div class="contact-info">
+                Jl. Babelan, Kelurahan Bahagia Bekasi, Jawa Barat | +62 858-8810-2696 | https://www.linkedin.com/in/richard-patung-landu-meha-9099a3259
+            </div>
+            <div class="divider-double"></div>
+        </header>
+
+        <section id="summary">
+            <p class="summary-text">
+                Administrasi Office dengan kemampuan dalam pengelolaan operasional administrasi harian, pengaturan agenda kerja, pengelolaan database karyawan dan dokumen perusahaan, serta penyusunan laporan administrasi manajemen. Memiliki kemampuan koordinasi lintas divisi, komunikasi organisasi yang efektif, serta orientasi pada efisiensi dan keteraturan sistem administrasi perkantoran. Tersertifikasi resmi BNSP sebagai Digital Marketer yang ahli merancang strategi pemasaran modern, SEO, copywriting persuasif, dan optimasi konversi.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Pengalaman</h2>
+            
+            <div class="job-item">
+                <div class="item-header">
+                    Administrasi Divisi Satpam / 2021–2026 / PT. Provices Indonesia — Kementerian Perdagangan RI
+                </div>
+                <ul class="bullets">
+                    <li>Mengelola administrasi operasional dan kepegawaian meliputi pengendalian data personel, pengarsipan dokumen, serta pemutakhiran database secara terstruktur.</li>
+                    <li>Menyusun jadwal kerja operasional, melakukan monitoring pelaksanaan pekerjaan, serta memastikan kegiatan berjalan efektif sesuai standar organisasi.</li>
+                    <li>Mengelola absensi, timesheet, dan administrasi penggajian sebagai dasar kontrol kehadiran dan pembayaran karyawan.</li>
+                    <li>Menyusun laporan operasional dan administrasi secara berkala sebagai bahan evaluasi dan pelaporan kepada manajemen/User.</li>
+                    <li>Melakukan koordinasi dan monitoring kinerja ±150 personel yang tersebar di 10 gedung operasional untuk memastikan kelancaran layanan kerja.</li>
+                    <li>Mengelola administrasi kebutuhan operasional termasuk proses permintaan barang dan pengendalian dokumentasi secara tertib dan terdokumentasi.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="item-header">
+                    Administrasi Divisi Satpam / 2019–2021 / PT. Provices Indonesia — Apartement The Wave, Jaksel
+                </div>
+                <ul class="bullets">
+                    <li>Mengelola administrasi operasional, kepegawaian, pengarsipan dokumen, serta database personel.</li>
+                    <li>Menyusun jadwal operasional, rekap absensi, timesheet, dan penggajian karyawan.</li>
+                    <li>Melakukan penyusunan laporan berkala sebagai bahan evaluasi dan pelaporan kepada User/Manajemen.</li>
+                    <li>Memproses permintaan barang dan mengendalikan dokumentasi secara tertib.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="item-header">
+                    Anggota Security / 2018–2019 / PT. Uremessing Guard — Apartement 18th Rasuna Said, Jaksel
+                </div>
+                <ul class="bullets">
+                    <li>Melaksanakan pengamanan area gedung dan lingkungan operasional untuk memastikan situasi aman, tertib, dan kondusif.</li>
+                    <li>Melakukan penjagaan akses masuk serta penerimaan tamu sesuai prosedur operasional perusahaan.</li>
+                    <li>Melaksanakan patroli rutin dan pengecekan seluruh area dan lantai gedung guna memastikan keamanan fasilitas dan aset perusahaan.</li>
+                    <li>Melakukan monitoring aktivitas lingkungan kerja serta pencegahan potensi gangguan keamanan.</li>
+                    <li>Menyusun laporan kegiatan pengamanan dan hasil patroli melalui WhatsApp Group sebagai media pelaporan kepada pimpinan dan Komandan Regu (Danru).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">Riwayat Akademik</h2>
+            <div class="edu-item">
+                <div class="item-header">
+                    Sarjana Ekonomi Syariah (S.E.) / SEKOLAH TINGGI EKONOMI DAN BISNIS ISLAM (STEBIS) NUR ILMI AL-ISMAILIYUN / 2021–2024
+                </div>
+                <ul class="bullets">
+                    <li>IPK: 3.8</li>
+                    <li>
+                        Mata kuliah yang relevan: 
+                        <span class="checkmark">✔</span> Administrasi &nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Manajemen &nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Operasional &nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Akuntansi dasar &nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Komunikasi bisnis
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="certificates">
+            <h2 class="section-title">Sertificate & Keahlian</h2>
+            
+            <div class="cert-item">
+                • <span class="cert-title-year">Sertifikat Ijazah Gada Pratama / 2019</span> — 
+                <span class="cert-issuer">PT. Evan Putra Jaya</span>. 
+                (Dasar-dasar Pengamanan & Prosedur Keamanan, Pengendalian Akses & Pemeriksaan Tamu, Penanganan Situasi Darurat, Problem Solving di Lapangan, Kerja Sama Tim & Koordinasi, Disiplin & Kepatuhan SOP).
+            </div>
+
+            <div class="cert-item">
+                • <span class="cert-title-year">Sertifikat Beladiri Ijazah Karate / 2020</span> — 
+                <span class="cert-issuer">PT. Provices Group</span>. 
+                (Teknik Pertahanan Diri, Ketahanan Fisik & Mental, Refleks & Respons, Manajemen Konflik Dasar Cepat).
+            </div>
+
+            <div class="cert-item">
+                • <span class="cert-title-year">Microsoft Office Admin Kantor / 2021</span> — 
+                <span class="cert-issuer">Sans Smart</span>. 
+                (Administrasi Perkantoran, Pengolahan Data (Microsoft Excel), Pembuatan Surat & Dokumen (Microsoft Word), Pengelolaan Arsip Digital, Pembuatan Laporan Administratif, Google Workspace (Docs, Sheets, Drive, Google Form, Google, Google Sites)).
+            </div>
+
+            <div class="cert-item">
+                • <span class="cert-title-year">Sertificate Microsoft Office / 2024</span> — 
+                <span class="cert-issuer">LKP Borju Digital & Kursus Digital</span>. 
+                (Microsoft Office Administration – Data Management, Administrative Reporting, Professional Documentation, Presentation Development, & Digital Office Operations).
+            </div>
+
+            <div class="cert-item">
+                • <span class="cert-title-year">Sertificate Digital Marketing: Copywriting / 2024</span> — 
+                <span class="cert-issuer">Belajar Skill</span>. 
+                (Copywriting, Content Writing, SEO Basic, Social Media Marketing, Pembuatan Konten Promosi, Strategi Branding, & Digital Campaign).
+            </div>
+
+            <div class="cert-item">
+                • <span class="cert-title-year">Certified Public Speaking (CPS) / 2026</span> — 
+                <span class="cert-issuer">LKP WellldoneSkills Nawara Pratama</span>. 
+                (Public Speaking Fundamental, Teknik Komunikasi Efektif, Penguasaan Panggung, Body Language, Vocal Power, dan Presentation Skill).
+            </div>
+
+            <div class="cert-item">
+                • <span class="cert-title-year">Pelatihan & Certified BNSP Digital Marketing (CDM) / 2026</span> — 
+                <span class="cert-issuer">LKP Novasa Digital Indonesia</span>. 
+                (Digital Marketing Fundamental, SEO, SEM, Social Media, Content Marketing, Analytics).
+            </div>
+        </section>
+
+        <section id="contact-info-footer">
+            <h2 class="section-title">Informasi Kontak</h2>
+            <div class="footer-info">
+                <table>
+                    <tr>
+                        <td class="label">Telepon:</td>
+                        <td>+62 858-8810-2696</td>
+                        <td class="label">Alamat:</td>
+                        <td>Jl. Babelan, Kelurahan Bahagia, Bekasi, Jawa Barat</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Email:</td>
+                        <td>richardpl.meha@gmail.com</td>
+                        <td class="label">LinkedIn:</td>
+                        <td>https://www.linkedin.com/in/richard-patung-landu-meha-9099a3259</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Portofolio:</td>
+                        <td colspan="3">https://richard-cyber-portofolio.netlify.app/</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Secara otomatis membuka dialog print jika ada parameter ?print=true -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('print') === 'true') {
+                setTimeout(() => {
+                    window.print();
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
