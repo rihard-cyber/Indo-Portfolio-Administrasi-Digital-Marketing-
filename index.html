@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Patung Landu Meha - Portfolio</title>
-    <meta name="description" content="Portfolio of Richard Patung Landu Meha - Administration Office Professional.">
+    <title>Richard Patung Landu Meha — Security Operations Admin &amp; Technology Enthusiast</title>
+    <meta name="description" content="Portofolio Richard Patung Landu Meha — Profesional Administrasi Operasional Keamanan, Digital Marketer Tersertifikasi BNSP, dan Penggiat Teknologi. 7+ tahun pengalaman di bidang administrasi operasional, SEO, copywriting & eksplorasi teknologi.">
+    <meta name="keywords" content="Richard Patung Landu Meha, administrasi, digital marketing, web developer, portofolio, BNSP, SEO, copywriting, Bekasi">
+    <meta name="author" content="Richard Patung Landu Meha">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:title" content="Richard Patung Landu Meha — Admin, Digital Marketing &amp; Web Developer">
+    <meta property="og:description" content="Profesional Administrasi Perkantoran &amp; Digital Marketer Tersertifikasi BNSP. 7+ tahun pengalaman, ±150 personel dikoordinasi, 6+ sertifikasi.">
+    <meta property="og:image" content="https://rihard-cyber.github.io/images/foto-profil.jpg">
+    <meta property="og:url" content="https://rihard-cyber.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Richard Patung Landu Meha — Admin, Digital Marketing &amp; Web Developer">
+    <meta name="twitter:description" content="Profesional Administrasi Perkantoran &amp; Digital Marketer Tersertifikasi BNSP. 7+ tahun pengalaman.">
+    <meta name="twitter:image" content="https://rihard-cyber.github.io/images/foto-profil.jpg">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#06B6D4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +40,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap"
         rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- Phosphor Icons (for modern icons) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Devicon Font for beautiful, reliable developer logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -28,13 +57,14 @@
     <header id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">Richard P. <span>L. Meha</span></a>
-            <nav class="nav-links">
-                <a href="#about" class="nav-link">Tentang</a>
-                <a href="#experience" class="nav-link">Pengalaman</a>
-                <a href="#education" class="nav-link">Akademik</a>
-                <a href="#skills" class="nav-link">Keahlian & Sertifikat</a>
-                <a href="#contact" class="nav-link">Kontak</a>
-                <button id="theme-toggle" class="theme-btn" title="Ganti Tema">
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#about" class="nav-link" aria-label="About section">Tentang</a>
+                <a href="#experience" class="nav-link" aria-label="Experience section">Pengalaman</a>
+                <a href="#education" class="nav-link" aria-label="Education section">Pendidikan</a>
+                <a href="#skills" class="nav-link" aria-label="Skills and Certificates section">Keahlian &amp; Sertifikat</a>
+                <a href="#websites" class="nav-link" aria-label="Websites and Apps section">Website &amp; Aplikasi</a>
+                <a href="#contact" class="nav-link" aria-label="Contact section">Kontak</a>
+                <button id="theme-toggle" class="theme-btn" title="Change Theme">
                     <i class="ph ph-moon"></i>
                 </button>
             </nav>
@@ -48,20 +78,18 @@
     <section id="hero" class="hero">
         <div class="container hero-content">
             <div class="hero-text fade-in-up">
-                <p class="greeting">Halo, saya</p>
+                <p class="greeting">Halo, Saya</p>
                 <h1 class="name">Richard Patung Landu Meha</h1>
-                <h2 class="role">Administrasi Office & Digital Marketing Professional</h2>
-                <p class="summary">Profesional multitalenta dengan keahlian unggul dalam administrasi operasional.
-                    Tersertifikasi resmi BNSP sebagai <strong>Digital Marketer</strong> yang ahli merancang strategi
-                    pemasaran modern, SEO, copywriting persuasif, dan optimasi konversi.</p>
+                <h2 class="role">Admin Operasi Keamanan &amp; Penggiat Teknologi</h2>
+                <p class="summary">Profesional yang sangat disiplin dengan pengalaman 7+ tahun dalam administrasi operasi keamanan serta minat yang kuat pada teknologi. Saat ini sedang menempuh gelar Sarjana ganda di bidang Teknik Informatika dan Manajemen. Memanfaatkan alur kerja berbasis AI untuk mempercepat pembelajaran dan merancang prototipe solusi digital.</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
-                    <a href="cv-ats.html?print=true" target="_blank" class="btn btn-secondary">Download CV</a>
-                    <a href="#experience" class="btn btn-secondary">Lihat Pengalaman</a>
+                    <a href="#contact" class="btn btn-primary" aria-label="Contact Me">Hubungi Saya</a>
+                    <a href="cv-ats.html?print=true" target="_blank" class="btn btn-secondary" aria-label="Download CV">Unduh CV</a>
+                    <a href="#experience" class="btn btn-secondary" aria-label="View Experience">Lihat Pengalaman</a>
                 </div>
             </div>
-            <div class="hero-visual fade-in-up delay-1">
-                <div class="glass-card hero-stats"
+            <div class="hero-visual swipe-slider fade-in-up delay-1">
+                <div class="glass-card hero-stats glow-border-card"
                     onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})"
                     style="cursor: pointer;">
                     <div class="stat">
@@ -70,22 +98,22 @@
                         <p>Pengalaman Kerja</p>
                     </div>
                 </div>
-                <div class="glass-card hero-stats"
+                <div class="glass-card hero-stats glow-border-card"
                     onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})"
                     style="cursor: pointer;">
                     <div class="stat">
                         <i class="ph-fill ph-users"></i>
                         <h3>150+</h3>
-                        <p>Personel Dikoordinir</p>
+                        <p>Personel Dikoordinasikan</p>
                     </div>
                 </div>
-                <div class="glass-card hero-stats"
+                <div class="glass-card hero-stats glow-border-card"
                     onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})"
                     style="cursor: pointer;">
                     <div class="stat">
                         <i class="ph-fill ph-certificate"></i>
                         <h3 id="stat-certificates">6+</h3>
-                        <p>Sertifikat Keahlian</p>
+                        <p>Sertifikasi</p>
                     </div>
                 </div>
             </div>
@@ -101,23 +129,19 @@
                 <div class="divider"></div>
             </div>
             <div class="about-grid fade-in-up">
-                <div class="about-photo glass-panel">
-                    <img src="images/foto-profil.jpg" alt="Foto Profil" class="profile-img" style="cursor:pointer;"
-                        data-gallery="images/foto-profil.jpg,images/foto-profil-2.jpg,images/foto-profil-3.jpg,images/foto-profil-4.mp4"><br>
+                <div class="about-photo glass-panel glow-border-card">
+                    <img loading="lazy" src="images/foto-profil.jpg" alt="Profile Photo" class="profile-img" style="cursor:pointer;"
+                        data-gallery="images/foto-profil.jpg,images/foto-profil-4.mp4"><br>
                     <p style="text-align:center; font-size:0.8rem; margin-top:10px; color:var(--text-secondary);"></p>
                 </div>
-                <div class=" about-text glass-panel">
-                    <p>Saya merupakan seorang profesional di bidang <strong>Administrasi Office</strong> dengan
-                        kemampuan handal dalam pengelolaan operasional harian, pengaturan agenda kerja, database
-                        karyawan, serta penyusunan laporan manajemen yang komprehensif.</p>
-                    <p>Selain keahlian administratif, saya adalah seorang <strong>Digital Marketer Tersertifikasi
-                            BNSP</strong> yang <em>passionate</em> di dunia pemasaran digital. Saya ahli meracik
-                        strategi pemasaran inovatif menggabungkan <strong>SEO</strong>, <em>copywriting</em> memikat,
-                        serta kampanye media sosial yang terstruktur. Pendekatan saya selalu berbasis data untuk
-                        mengoptimalkan jangkauan pasar dan meningkatkan konversi.</p>
-                    <p>Fokus utama saya adalah mengkombinasikan efisiensi manajerial perkantoran dengan kekuatan
-                        strategi digital guna menciptakan ekosistem kerja yang produktif, sekaligus membawa pertumbuhan
-                        brand bagi perusahaan.</p>
+                <div class="about-text glass-panel glow-border-card">
+                    <p><strong>Profesional Administrasi &amp; Operasional Keamanan</strong> dengan pengalaman kerja lebih dari <strong>7 tahun</strong>, mengoordinasikan <strong>±150 personel</strong> serta mengelola keamanan dan logistik harian divisi. Saat ini sedang aktif bertransisi ke ranah TI dan pengembangan web, mengejar gelar Sarjana ganda di <strong>Teknik Informatika</strong> dan <strong>Manajemen</strong>. Resmi tersertifikasi oleh <strong>BNSP sebagai Digital Marketer</strong>.</p>
+                    <div class="expandable-content">
+                        <p>Seorang pembelajar yang sangat disiplin yang menggunakan <strong>alur kerja pengembangan berbasis AI (Vibe Coding)</strong> untuk merancang prototipe perangkat lunak secara cepat dan merampingkan sistem operasional. Saya menggabungkan presisi keamanan & logistik operasional dengan teknologi modern untuk membangun solusi digital yang praktis sekaligus dapat diandalkan.</p>
+                        <p>Sebagai mahasiswa aktif <strong>Teknik Informatika</strong> (Universitas Siber Muhammadiyah) dan <strong>Manajemen</strong> (STIE Tunas Nusantara), saya mengeksplorasi stack pengembangan modern — termasuk React, Node.js, Supabase, PostgreSQL, dan administrasi sistem Linux — bersama dengan penerapan proyek dunia nyata melalui GitHub Actions.</p>
+                    </div>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
             </div>
         </div>
@@ -130,81 +154,81 @@
                 <h2>Pengalaman Profesional</h2>
                 <div class="divider"></div>
             </div>
-            <div class="timeline">
+            <div class="timeline swipe-slider">
                 <!-- Job 3 -->
                 <div class="timeline-item fade-in-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
+                    <div class="timeline-content glow-border-card">
                         <div class="job-photo">
-                            <img src="images/pengalaman3-1.jpg"
-                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Foto+Kegiatan/Bekerja'"
-                                alt="Kegiatan" class="exp-img"
-                                data-gallery="images/pengalaman3-1.jpg,images/pengalaman3-2.jpg,images/pengalaman3-3.jpg,images/pengalaman3-4.jpg,images/pengalaman3-5.mp4,images/pengalaman3-6.mp4">
+                            <img loading="lazy" src="images/pengalaman3-1.jpg"
+                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Work+Activity'"
+                                alt="Activity" class="exp-img"
+                                data-gallery="images/pengalaman3-1.jpg,images/pengalaman3-2.jpg,images/pengalaman3-3.jpg,images/pengalaman3-4.jpg">
                         </div>
                         <span class="timeline-date">2021 - 2026</span>
-                        <h3 class="job-title">Administrasi Divisi Satpam</h3>
+                        <h3 class="job-title">Administrasi Divisi Keamanan</h3>
                         <h4 class="company">PT. Provices Indonesia - Kementerian Perdagangan RI</h4>
-                        <ul class="job-duties">
-                            <li>Mengelola administrasi operasional dan kepegawaian meliputi pengendalian data personel,
-                                pengarsipan dokumen, serta pemutakhiran database secara terstruktur.</li>
-                            <li>Menyusun jadwal kerja operasional, monitoring pekerjaan, dan memastikan kegiatan efektif
-                                sesuai standar organisasi.</li>
-                            <li>Mengelola absensi, timesheet, dan administrasi penggajian sebagai dasar kontrol
-                                kehadiran/pembayaran.</li>
-                            <li>Menyusun laporan operasional dan administrasi berkala untuk bahan evaluasi manajemen.
-                            </li>
-                            <li>Melakukan koordinasi dan monitoring kinerja ±150 personel yang tersebar di 10 gedung
-                                operasional.</li>
-                            <li>Mengelola administrasi kebutuhan operasional, permintaan barang, dan pengendalian
-                                dokumentasi.</li>
+                        <ul class="job-duties expandable-content">
+                            <li>Mengelola administrasi operasional dan kepegawaian termasuk kontrol data personel,
+                                pengarsipan dokumen, dan pembaruan database terstruktur.</li>
+                            <li>Menyusun jadwal kerja operasional, memantau kinerja, dan memastikan seluruh aktivitas
+                                berjalan efektif sesuai standar organisasi.</li>
+                            <li>Mengelola absensi, timesheet, dan administrasi penggajian sebagai dasar
+                                kontrol kehadiran/pembayaran.</li>
+                            <li>Menyusun laporan operasional dan administrasi berkala untuk evaluasi manajemen.</li>
+                            <li>Mengoordinasikan dan memonitor kinerja ±150 personel yang tersebar di 10 gedung operasional.</li>
+                            <li>Mengelola administrasi kebutuhan operasional, permintaan barang, dan kontrol dokumentasi.</li>
                         </ul>
+                        <button class="btn btn-secondary btn-sm read-more-btn"
+                            style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                     </div>
                 </div>
 
                 <!-- Job 2 -->
                 <div class="timeline-item fade-in-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
+                    <div class="timeline-content glow-border-card">
                         <div class="job-photo">
-                            <img src="images/pengalaman2-1.jpg"
-                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Foto+Kegiatan/Bekerja'"
-                                alt="Kegiatan" class="exp-img"
-                                data-gallery="images/pengalaman2-1.jpg,images/pengalaman2-2.jpg,images/pengalaman2-3.jpg,images/pengalaman2-4.jpg,images/pengalaman2-5.mp4,images/pengalaman2-6.mp4">
+                            <img loading="lazy" src="images/pengalaman2-1.jpg"
+                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Work+Activity'"
+                                alt="Activity" class="exp-img"
+                                data-gallery="images/pengalaman2-1.jpg,images/pengalaman2-2.jpg,images/pengalaman2-3.jpg,images/pengalaman2-4.jpg">
                         </div>
                         <span class="timeline-date">2019 - 2021</span>
-                        <h3 class="job-title">Administrasi Divisi Satpam</h3>
-                        <h4 class="company">PT. Provices Indonesia - Apartemen The Wave, Jaksel</h4>
-                        <ul class="job-duties">
-                            <li>Mengelola administrasi operasional, kepegawaian, pengarsipan dokumen, serta database
+                        <h3 class="job-title">Administrasi Divisi Keamanan</h3>
+                        <h4 class="company">PT. Provices Indonesia - Apartemen The Wave, Jakarta Selatan</h4>
+                        <ul class="job-duties expandable-content">
+                            <li>Mengelola administrasi operasional, kepegawaian, pengarsipan dokumen, dan database
                                 personel.</li>
-                            <li>Menyusun jadwal operasional, rekap absensi, timesheet, dan penggajian karyawan.</li>
-                            <li>Melakukan penyusunan laporan berkala sebagai bahan evaluasi dan pelaporan kepada
-                                User/Manajemen.</li>
-                            <li>Memproses permintaan barang dan mengendalikan dokumentasi secara tertib.</li>
+                            <li>Menyusun jadwal operasional, rekap kehadiran, timesheet, dan penggajian karyawan.
+                            </li>
+                            <li>Menyusun laporan berkala sebagai bahan evaluasi dan pelaporan kepada User/Manajemen.</li>
+                            <li>Memproses permintaan barang dan mengontrol dokumentasi secara sistematis.</li>
                         </ul>
+                        <button class="btn btn-secondary btn-sm read-more-btn"
+                            style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                     </div>
                 </div>
 
                 <!-- Job 1 -->
                 <div class="timeline-item fade-in-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-panel">
+                    <div class="timeline-content glow-border-card">
                         <div class="job-photo">
-                            <img src="images/pengalaman1-1.jpg"
-                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Foto+Kegiatan/Bekerja'"
-                                alt="Kegiatan" class="exp-img"
-                                data-gallery="images/pengalaman1-1.jpg,images/pengalaman1-2.jpg,images/pengalaman1-3.jpg,images/pengalaman1-4.jpg,images/pengalaman1-5.mp4,images/pengalaman1-6.mp4">
+                            <img loading="lazy" src="images/pengalaman1-1.jpg"
+                                onerror="this.src='https://placehold.co/600x250/1F2937/06B6D4?text=Work+Activity'"
+                                alt="Activity" class="exp-img"
+                                data-gallery="images/pengalaman1-1.jpg,images/pengalaman1-2.jpg,images/pengalaman1-3.jpg,images/pengalaman1-4.jpg">
                         </div>
                         <span class="timeline-date">2018 - 2019</span>
-                        <h3 class="job-title">Anggota Security</h3>
-                        <h4 class="company">PT. Uremessing Guard - Departement 18th Rasuna Said, Jaksel</h4>
-                        <ul class="job-duties">
-                            <li>Melaksanakan pengamanan area gedung dan penjagaan akses masuk serta penerimaan tamu.
+                        <h3 class="job-title">Satuan Pengamanan (Security)</h3>
+                        <h4 class="company">PT. Uremessing Guard - Department 18th Rasuna Said, Jakarta Selatan</h4>
+                        <ul class="job-duties expandable-content">
+                            <li>Melaksanakan pengamanan area gedung serta menjaga akses masuk dan penerimaan tamu.
                             </li>
-                            <li>Melaksanakan patroli rutin dan pengecekan area operasional.</li>
-                            <li>Melakukan monitoring aktivitas lingkungan kerja dan pencegahan potensi gangguan.</li>
-                            <li>Menyusun laporan kegiatan pengamanan melalui WhatsApp Group untuk pimpinan.</li>
+                            <li>Melakukan patroli rutin dan memeriksa kondisi area operasional.</li>
+                            <li>Memantau aktivitas lingkungan kerja dan mencegah potensi gangguan.</li>
+                            <li>Menyusun laporan kegiatan pengamanan melalui Grup WhatsApp untuk pimpinan.</li>
                         </ul>
+                        <button class="btn btn-secondary btn-sm read-more-btn"
+                            style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                     </div>
                 </div>
             </div>
@@ -218,35 +242,105 @@
                 <h2>Riwayat Akademik</h2>
                 <div class="divider"></div>
             </div>
-            <div class="education-card glass-panel fade-in-up">
+            
+            <!-- Ongoing degree 1: Informatics Engineering -->
+            <div class="education-card glass-panel glow-border-card fade-in-up" style="margin: 0 auto 40px auto;">
+                <div class="edu-photo">
+                    <img loading="lazy" src="https://placehold.co/800x300/111827/06B6D4?text=Teknik+Informatika"
+                        onerror="this.src='https://placehold.co/800x300/1F2937/06B6D4?text=Kegiatan+Akademik'"
+                        alt="Academic Photo" class="edu-img"
+                        data-gallery="https://placehold.co/800x300/111827/06B6D4?text=Teknik+Informatika">
+                </div>
                 <div class="edu-header">
-                    <i class="ph-fill ph-graduation-cap edu-icon"></i>
+                    <i class="ph-fill ph-code edu-icon"
+                        style="font-size: 3rem; color: var(--accent-primary);"></i>
                     <div>
-                        <h3 class="degree">Sarjana Ekonomi Syariah (S.E.)</h3>
-                        <h4 class="university">Sekolah Tinggi Ekonomi dan Bisnis Islam (STEBIS) Nur Ilmi Al-Ismailiyun
-                        </h4>
+                        <h3 class="degree">S1 Teknik Informatika (Berjalan)</h3>
+                        <h4 class="university">Universitas Siber Muhammadiyah</h4>
                     </div>
                 </div>
-                <div class="edu-details">
-                    <span class="edu-date"><i class="ph ph-calendar-blank"></i> 2021 - 2024</span>
-                    <span class="edu-gpa"><i class="ph ph-star"></i> IPK: 3.8</span>
+                <div class="edu-details"
+                    style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+                    <span class="edu-date"><i class="ph ph-calendar-blank"></i> 2024 - Sekarang (Target 2027)</span>
+                    <span class="edu-gpa"><i class="ph ph-book-open"></i> Fokus: Perangkat Lunak &amp; Sistem</span>
                 </div>
                 <div class="edu-courses">
-                    <strong>Mata kuliah relevan:</strong>
-                    <div class="pill-container">
+                    <strong style="display: block; margin-bottom: 10px;">Fokus Studi Utama:</strong>
+                    <div class="pill-container"
+                        style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                        <span class="pill">Algoritma &amp; Pemrograman</span>
+                        <span class="pill">Pengembangan Web (HTML, CSS, JS, React)</span>
+                        <span class="pill">Sistem Linux &amp; Git</span>
+                        <span class="pill">Basis Data &amp; Supabase</span>
+                        <span class="pill">Jaringan &amp; Git Actions</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing degree 2: Management -->
+            <div class="education-card glass-panel glow-border-card fade-in-up" style="margin: 0 auto 40px auto;">
+                <div class="edu-photo">
+                    <img loading="lazy" src="https://placehold.co/800x300/111827/06B6D4?text=Studi+Manajemen"
+                        onerror="this.src='https://placehold.co/800x300/1F2937/06B6D4?text=Kegiatan+Akademik'"
+                        alt="Academic Photo" class="edu-img"
+                        data-gallery="https://placehold.co/800x300/111827/06B6D4?text=Studi+Manajemen">
+                </div>
+                <div class="edu-header">
+                    <i class="ph-fill ph-chart-line-up edu-icon"
+                        style="font-size: 3rem; color: var(--accent-primary);"></i>
+                    <div>
+                        <h3 class="degree">S1 Manajemen (Berjalan)</h3>
+                        <h4 class="university">STIE Tunas Nusantara</h4>
+                    </div>
+                </div>
+                <div class="edu-details"
+                    style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+                    <span class="edu-date"><i class="ph ph-calendar-blank"></i> 2024 - Sekarang (Target 2027)</span>
+                    <span class="edu-gpa"><i class="ph ph-trend-up"></i> Fokus: Operasional &amp; Logistik</span>
+                </div>
+                <div class="edu-courses">
+                    <strong style="display: block; margin-bottom: 10px;">Fokus Studi Utama:</strong>
+                    <div class="pill-container"
+                        style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                        <span class="pill">Manajemen Operasional</span>
+                        <span class="pill">Pengembangan Sumber Daya Manusia</span>
+                        <span class="pill">Perencanaan Strategis</span>
+                        <span class="pill">Administrasi Bisnis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graduated: STEBIS -->
+            <div class="education-card glass-panel glow-border-card fade-in-up" style="margin: 0 auto;">
+                <div class="edu-photo">
+                    <img loading="lazy" src="images/akademik-1.jpg"
+                        onerror="this.src='https://placehold.co/800x300/1F2937/06B6D4?text=Kegiatan+Akademik'"
+                        alt="Academic Photo" class="edu-img"
+                        data-gallery="images/akademik-1.jpg">
+                </div>
+                <div class="edu-header">
+                    <i class="ph-fill ph-graduation-cap edu-icon"
+                        style="font-size: 3rem; color: var(--accent-primary);"></i>
+                    <div>
+                        <h3 class="degree">S1 Ekonomi Syariah (S.E.)</h3>
+                        <h4 class="university">Sekolah Tinggi Ekonomi dan Bisnis Islam (STEBIS) Nur Ilmi Al-Ismailiyun</h4>
+                    </div>
+                </div>
+                <div class="edu-details"
+                    style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+                    <span class="edu-date"><i class="ph ph-calendar-blank"></i> 2021 - 2024</span>
+                    <span class="edu-gpa"><i class="ph ph-star"></i> IPK: 3.8 / 4.0</span>
+                </div>
+                <div class="edu-courses">
+                    <strong style="display: block; margin-bottom: 10px;">Mata Kuliah Relevan:</strong>
+                    <div class="pill-container"
+                        style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
                         <span class="pill">Administrasi</span>
                         <span class="pill">Manajemen</span>
                         <span class="pill">Operasional</span>
                         <span class="pill">Akuntansi Dasar</span>
                         <span class="pill">Komunikasi Bisnis</span>
                     </div>
-                </div>
-                <div class="edu-photo" style="margin-top: 30px; border-radius: 12px; overflow: hidden;">
-                    <img src="images/akademik-1.jpg"
-                        onerror="this.src='https://placehold.co/800x300/1F2937/06B6D4?text=Foto+Kegiatan+Akademik'"
-                        alt="Foto Akademik" class="edu-img"
-                        style="width:100%; height:300px; object-fit:cover; display:block; cursor:pointer;"
-                        data-gallery="images/akademik-1.jpg,images/akademik-2.jpg,images/akademik-3.jpg,images/akademik-4.jpg,images/akademik-5.mp4,images/akademik-6.mp4">
                 </div>
             </div>
         </div>
@@ -256,107 +350,423 @@
     <section id="skills" class="section bg-alt">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Sertifikat & Keahlian</h2>
+                <h2>Sertifikat &amp; Keahlian</h2>
                 <div class="divider"></div>
             </div>
-            <div class="certifications-grid">
+            <div class="cert-slider fade-in-up">
                 <!-- Cert 1 (2026) -->
-                <div class="cert-card glass-card fade-in-up">
+                <div class="cert-card glow-border-card">
                     <div class="cert-photo">
-                        <img src="images/Certified Public Speaking (CPS)-1.jpeg" alt="Certified Public Speaking (CPS)"
+                        <img loading="lazy" src="images/Certified Public Speaking (CPS)-1.jpeg" alt="Certified Public Speaking (CPS)"
                             class="cert-img"
-                            data-gallery="images/Certified Public Speaking (CPS)-1.jpeg,images/Certified Public Speaking (CPS)-2.jpeg,images/Certified Public Speaking (CPS)-3.jpeg,images/Certified Public Speaking (CPS)-4.jpeg,images/Certified Public Speaking (CPS)-5.mp4,images/Certified Public Speaking (CPS)-6.mp4">
+                            data-gallery="images/Certified Public Speaking (CPS)-1.jpeg,images/Certified Public Speaking (CPS)-2.jpeg,images/Certified Public Speaking (CPS)-3.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-megaphone"></i></div>
                     <span class="cert-year">2026</span>
                     <h3>Certified Public Speaking (CPS)</h3>
                     <p class="cert-issuer">LKP WellldoneSkills Nawara Pratama</p>
-                    <p class="cert-desc">Public Speaking Fundamental, Teknik Komunikasi Efektif, Penguasaan Panggung,
-                        Body Language, Vocal Power, dan Presentation Skill.</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Dasar-dasar Public Speaking, Teknik Komunikasi Efektif, Penguasaan Panggung, Bahasa Tubuh,
+                        Kekuatan Vokal, dan Keterampilan Presentasi.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
                 <!-- Cert 2 (2026) -->
-                <div class="cert-card glass-card fade-in-up delay-1">
+                <div class="cert-card glow-border-card delay-1">
                     <div class="cert-photo">
-                        <img src="images/BNSP Digital Marketing Certification-1.jpeg"
-                            alt="Sertifikasi BNSP Digital Marketing" class="cert-img"
-                            data-gallery="images/BNSP Digital Marketing Certification-1.jpeg,images/BNSP Digital Marketing Certification-2.jpeg,images/BNSP Digital Marketing Certification-3.jpeg,images/BNSP Digital Marketing Certification-4.jpeg,images/BNSP Digital Marketing Certification-5.mp4,images/BNSP Digital Marketing Certification-6.mp4">
+                        <img loading="lazy" src="images/BNSP Digital Marketing Certification-1.jpeg"
+                            alt="BNSP Digital Marketing Certification" class="cert-img"
+                            data-gallery="images/BNSP Digital Marketing Certification-1.jpeg,images/BNSP Digital Marketing Certification-2.jpeg,images/BNSP Digital Marketing Certification-3.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-rocket-launch"></i></div>
                     <span class="cert-year">2026</span>
-                    <h3>Sertifikasi BNSP Digital Marketing</h3>
+                    <h3>Sertifikasi Digital Marketing BNSP</h3>
                     <p class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP)</p>
-                    <p class="cert-desc">Strategi Pemasaran Digital Komprehensif, SEO/SEM, Social Media Management,
-                        Analytics, Copywriting Persuasif, dan Optimasi Campaign Berbasis Konversi.</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Strategi Pemasaran Digital Komprehensif, SEO/SEM, Manajemen Media Sosial, Analitik,
+                        Copywriting Persuasif, dan Optimalisasi Kampanye Berbasis Konversi.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
                 <!-- Cert 3 (2024) -->
-                <div class="cert-card glass-card fade-in-up delay-2">
+                <div class="cert-card glow-border-card delay-2">
                     <div class="cert-photo">
-                        <img src="images/Sertificate Microsoft Office-1.jpeg" alt="Sertifikat Microsoft Office"
+                        <img loading="lazy" src="images/Sertificate Microsoft Office-1.jpeg" alt="Sertifikat Microsoft Office"
                             class="cert-img"
-                            data-gallery="images/Sertificate Microsoft Office-1.jpeg,images/Sertificate Microsoft Office-2.jpeg,images/Sertificate Microsoft Office-3.jpeg,images/Sertificate Microsoft Office-4.jpeg,images/Sertificate Microsoft Office-5.mp4,images/Sertificate Microsoft Office-6.mp4">
+                            data-gallery="images/Sertificate Microsoft Office-1.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-microsoft-word-logo"></i></div>
                     <span class="cert-year">2024</span>
-                    <h3>Sertificate Microsoft Office</h3>
-                    <p class="cert-issuer">LKP Borju Digital & Kursus Digital</p>
-                    <p class="cert-desc">Data Management, Administrative Reporting, Professional Documentation,
-                        Presentation Development, & Digital Office Operations.</p>
+                    <h3>Sertifikat Microsoft Office</h3>
+                    <p class="cert-issuer">Borju Digital &amp; Digital Course LKP</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Manajemen Data, Pelaporan Administratif, Dokumentasi Profesional, Pengembangan Presentasi,
+                        &amp; Operasional Kantor Digital.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
                 <!-- Cert 4 (2024) -->
-                <div class="cert-card glass-card fade-in-up">
+                <div class="cert-card glow-border-card">
                     <div class="cert-photo">
-                        <img src="images/Sertificate Digital Marketing Copywriting-1.jpeg"
+                        <img loading="lazy" src="images/Sertificate Digital Marketing Copywriting-1.jpeg"
                             alt="Sertifikat Digital Marketing: Copywriting" class="cert-img"
-                            data-gallery="images/Sertificate Digital Marketing Copywriting-1.jpeg,images/Sertificate Digital Marketing Copywriting-2.jpeg,images/Sertificate Digital Marketing Copywriting-3.jpeg,images/Sertificate Digital Marketing Copywriting-4.jpeg,images/Sertificate Digital Marketing Copywriting-5.mp4,images/Sertificate Digital Marketing Copywriting-6.mp4">
+                            data-gallery="images/Sertificate Digital Marketing Copywriting-1.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-pen-nib"></i></div>
                     <span class="cert-year">2024</span>
-                    <h3>Sertificate Digital Marketing: Copywriting</h3>
+                    <h3>Sertifikat Digital Marketing: Copywriting</h3>
                     <p class="cert-issuer">Belajar Skill</p>
-                    <p class="cert-desc">Copywriting, Content Writing, SEO Basic, Social Media Marketing, Pembuatan
-                        Konten Promosi, Strategi Branding, & Digital Campaign.</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Copywriting, Penulisan Konten, SEO Dasar, Pemasaran Media Sosial, Pembuatan Konten Promosi,
+                        Strategi Branding, &amp; Kampanye Digital.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
                 <!-- Cert 5 (2021) -->
-                <div class="cert-card glass-card fade-in-up delay-1">
+                <div class="cert-card glow-border-card delay-1">
                     <div class="cert-photo">
-                        <img src="images/Microsoft Office Admin Kantor-1.jpeg" alt="Microsoft Office Admin Kantor"
+                        <img loading="lazy" src="images/Microsoft Office Admin Kantor-1.jpeg" alt="Microsoft Office Admin Kantor"
                             class="cert-img"
-                            data-gallery="images/Microsoft Office Admin Kantor-1.jpeg,images/Microsoft Office Admin Kantor-2.jpeg,images/Microsoft Office Admin Kantor-3.jpeg,images/Microsoft Office Admin Kantor-4.jpeg,images/Microsoft Office Admin Kantor-5.mp4,images/Microsoft Office Admin Kantor-6.mp4">
+                            data-gallery="images/Microsoft Office Admin Kantor-1.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-desktop"></i></div>
                     <span class="cert-year">2021</span>
-                    <h3>Microsoft Office Admin Kantor</h3>
+                    <h3>Admin Microsoft Office</h3>
                     <p class="cert-issuer">Sans Smart</p>
-                    <p class="cert-desc">Administrasi Perkantoran, Pengolahan Data Excel, Surat & Dokumen, Arsip
-                        Digital, Laporan, & Google Workspace.</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Administrasi Perkantoran, Pengolahan Data Excel, Surat &amp; Dokumen, Arsip Digital, Laporan, &amp;
+                        Google Workspace.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
                 <!-- Cert 6 (2020) -->
-                <div class="cert-card glass-card fade-in-up delay-2">
+                <div class="cert-card glow-border-card delay-2">
                     <div class="cert-photo">
-                        <img src="images/Sertifikat Beladiri Ijazah Karate-1.jpeg"
-                            alt="Sertifikat Beladiri Ijazah Karate" class="cert-img"
-                            data-gallery="images/Sertifikat Beladiri Ijazah Karate-1.jpeg,images/Sertifikat Beladiri Ijazah Karate-2.jpeg,images/Sertifikat Beladiri Ijazah Karate-3.jpeg,images/Sertifikat Beladiri Ijazah Karate-4.jpeg,images/Sertifikat Beladiri Ijazah Karate-5.mp4,images/Sertifikat Beladiri Ijazah Karate-6.mp4">
+                        <img loading="lazy" src="images/Sertifikat Beladiri Ijazah Karate-1.jpeg" alt="Sertifikat Bela Diri Karate"
+                            class="cert-img"
+                            data-gallery="images/Sertifikat Beladiri Ijazah Karate-1.jpeg,images/Sertifikat Beladiri Ijazah Karate-2.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-shield-chevron"></i></div>
                     <span class="cert-year">2020</span>
-                    <h3>Sertificate Beladiri Ijazah Karate</h3>
+                    <h3>Sertifikat Bela Diri Karate</h3>
                     <p class="cert-issuer">PT. Provices Group</p>
-                    <p class="cert-desc">Teknik Pertahanan Diri, Ketahanan Fisik & Mental, Refleks, & Manajemen Konflik
-                        Dasar Cepat.</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Teknik Bela Diri, Daya Tahan Fisik &amp; Mental, Refleks, &amp; Manajemen Konflik Cepat Dasar.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
                 </div>
                 <!-- Cert 7 (2019) -->
-                <div class="cert-card glass-card fade-in-up">
+                <div class="cert-card glow-border-card">
                     <div class="cert-photo">
-                        <img src="images/Sertifikat Ijazah Gada Pratama-1.jpeg" alt="Sertifikat Ijazah Gada Pratama"
+                        <img loading="lazy" src="images/Sertifikat Ijazah Gada Pratama-1.jpeg" alt="Sertifikat Gada Pratama"
                             class="cert-img"
-                            data-gallery="images/Sertifikat Ijazah Gada Pratama-1.jpeg,images/Sertifikat Ijazah Gada Pratama-2.jpeg,images/Sertifikat Ijazah Gada Pratama-3.jpeg,images/Sertifikat Ijazah Gada Pratama-4.jpeg,images/Sertifikat Ijazah Gada Pratama-5.mp4,images/Sertifikat Ijazah Gada Pratama-6.mp4">
+                            data-gallery="images/Sertifikat Ijazah Gada Pratama-1.jpeg,images/Sertifikat Ijazah Gada Pratama-2.jpeg">
                     </div>
                     <div class="cert-icon"><i class="ph ph-shield-check"></i></div>
                     <span class="cert-year">2019</span>
-                    <h3>Sertificate Ijazah Gada Pratama</h3>
+                    <h3>Sertifikat Gada Pratama</h3>
                     <p class="cert-issuer">PT. Evan Putra Jaya</p>
-                    <p class="cert-desc">Dasar Pengamanan, Prosedur Keamanan, Akses Tamu, Problem Solving Lapangan,
-                        Kerja Sama Tim, Disiplin & SOP.</p>
+                    <p class="cert-desc expandable-content"
+                        style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; padding: 0 10px;">
+                        Keamanan Dasar, Prosedur Pengamanan, Akses Tamu, Pemecahan Masalah Lapangan, Kerja Sama Tim, Kedisiplinan &amp;
+                        SOP.</p>
+                    <button class="btn btn-secondary btn-sm read-more-btn"
+                        style="margin-top: 15px; font-size: 0.8rem; padding: 6px 16px;">Baca Selengkapnya</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Portfolio Section -->
+    <section id="websites" class="section bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Proyek Website &amp; Aplikasi</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="web-portfolio-container fade-in-up">
+                <div class="web-slider">
+                    <!-- Project 1 -->
+                    <div class="web-card glow-border-card">
+                        <div class="web-image-container">
+                            <img loading="lazy" src="images/pharmacy-ecommerce.png"
+                                alt="E-Commerce Apotek" class="web-img" data-gallery="images/pharmacy-ecommerce.png">
+                            <div class="web-img-overlay">
+                                <i class="ph ph-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="web-info">
+                            <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 10px;">Proyek Pembelajaran</span>
+                            <h3>E-Commerce Apotek</h3>
+                            <p>Situs web profil apotek dan e-commerce berfitur lengkap dengan integrasi checkout WhatsApp
+                                dan perhitungan keranjang dinamis.</p>
+                            <a href="https://rihard-cyber.github.io/toko-obat-sumber-sehat/Apotek/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary"
+                                style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 (AI English App) -->
+                    <div class="web-card glow-border-card">
+                        <div class="web-image-container">
+                            <img loading="lazy" src="images/ai-english.png"
+                                alt="AI Asisten Bahasa Inggris" class="web-img" data-gallery="images/ai-english.png">
+                            <div class="web-img-overlay">
+                                <i class="ph ph-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="web-info">
+                            <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 10px;">Proyek Eksperimental</span>
+                            <h3>AI Asisten Bahasa Inggris</h3>
+                            <p>Aplikasi percakapan interaktif bertenaga AI yang dirancang untuk membantu pengguna menguasai tata bahasa, berbicara, dan kosakata bahasa Inggris secara real time.</p>
+                            <a href="https://rihard-cyber.github.io/app-Ai-RIchard-English/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary"
+                                style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 (Secure Parking) -->
+                    <div class="web-card glow-border-card">
+                        <div class="web-image-container">
+                            <img loading="lazy" src="images/secure-parking.png"
+                                alt="JDC Secure Parking" class="web-img" data-gallery="images/secure-parking.png">
+                            <div class="web-img-overlay">
+                                <i class="ph ph-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="web-info">
+                            <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 10px;">Proyek Pembelajaran</span>
+                            <h3>JDC Secure Parking</h3>
+                            <p>Sistem manajemen parkir digital yang tangguh dengan fitur pengecekan slot real-time, validasi pemesanan aman, dan verifikasi masuk parkir.</p>
+                            <a href="https://rihard-cyber.github.io/jdc-parking/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary"
+                                style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <!-- Project 4 (SaaS HRIS Presensi) -->
+                    <div class="web-card glow-border-card">
+                        <div class="web-image-container">
+                            <img loading="lazy" src="images/hris-presensi.png"
+                                alt="SaaS HRIS Si Presensi" class="web-img" data-gallery="images/hris-presensi.png">
+                            <div class="web-img-overlay">
+                                <i class="ph ph-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="web-info">
+                            <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 10px;">Proyek Eksperimental</span>
+                            <h3>SaaS HRIS Si Presensi</h3>
+                            <p>Sistem Informasi Sumber Daya Manusia skala perusahaan dan aplikasi presensi digital yang menampilkan pembatasan wilayah (geofencing) real-time dan pelaporan timesheet.</p>
+                            <a href="https://rihard-cyber.github.io/Aplikasi_Absensi/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary"
+                                style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <!-- Project 5 (Digital Marketing Landing Page) -->
+                    <div class="web-card glow-border-card">
+                        <div class="web-image-container">
+                            <img loading="lazy" src="images/digital-marketing.png"
+                                alt="Landing Page Digital Marketing" class="web-img" data-gallery="images/digital-marketing.png">
+                            <div class="web-img-overlay">
+                                <i class="ph ph-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="web-info">
+                            <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 10px;">Proyek Pribadi</span>
+                            <h3>Landing Page Digital Marketing</h3>
+                            <p>Landing page premium dengan konversi tinggi yang dirancang untuk kampanye profesional, copywriting, dan pemetaan visibilitas mesin pencari.</p>
+                            <a href="https://rihard-cyber.github.io/LANDING-PAGE-DIGITAL-MARKETING/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary"
+                                style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Lihat Demo</a>
+                        </div>
+                    </div>
+                    <!-- Project 6 (Modern Portfolio) -->
+                    <div class="web-card glow-border-card">
+                        <div class="web-image-container">
+                            <img loading="lazy" src="images/modern-portfolio.png"
+                                alt="Website Portofolio Modern" class="web-img" data-gallery="images/modern-portfolio.png">
+                            <div class="web-img-overlay">
+                                <i class="ph ph-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="web-info">
+                            <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary); margin-bottom: 10px;">Proyek Pribadi</span>
+                            <h3>Portofolio Modern</h3>
+                            <p>Portofolio pribadi bertema glassmorphism yang responsif dengan beralih banyak tema, pelacakan kursor kustom, dan galeri interaktif.</p>
+                            <a href="https://rihard-cyber.github.io/richard-portfoliofulleng/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary"
+                                style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">Lihat Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack & Tools Explored Section -->
+    <section id="tools" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Teknologi &amp; Alat yang Dikuasai</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="tools-category fade-in-up">
+                <h3 class="tools-subheading">
+                    <i class="ph ph-squares-four" style="margin-right: 8px;"></i>Alat Produktivitas
+                </h3>
+                <div class="tools-grid">
+                    <div class="tool-item" title="MS Office — Daily Use">
+                        <i class="ph-fill ph-windows-logo" style="font-size: 40px; color: #00A4EF;"></i>
+                        <span class="tool-label">MS Office</span>
+                    </div>
+                    <div class="tool-item" title="Microsoft Word — Document &amp; Reporting">
+                        <i class="ph-fill ph-file-doc" style="font-size: 40px; color: #2B579A;"></i>
+                        <span class="tool-label">Word</span>
+                    </div>
+                    <div class="tool-item" title="Microsoft Excel — Data &amp; Reporting">
+                        <i class="ph-fill ph-file-csv" style="font-size: 40px; color: #217346;"></i>
+                        <span class="tool-label">Excel</span>
+                    </div>
+                    <div class="tool-item" title="Microsoft PowerPoint — Presentation">
+                        <i class="ph-fill ph-presentation-chart" style="font-size: 40px; color: #B7472A;"></i>
+                        <span class="tool-label">PowerPoint</span>
+                    </div>
+                    <div class="tool-item" title="Google Sheets — Data Collaboration">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/googlesheets" alt="Google Sheets">
+                        <span class="tool-label">Sheets</span>
+                    </div>
+                    <div class="tool-item" title="Google Forms — Data Collection">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/googleforms" alt="Google Forms">
+                        <span class="tool-label">Forms</span>
+                    </div>
+                    <div class="tool-item" title="Google Analytics — Traffic Analysis">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/googleanalytics" alt="Google Analytics">
+                        <span class="tool-label">Analytics</span>
+                    </div>
+                    <div class="tool-item" title="Canva — Graphic Design">
+                        <img loading="lazy" src="images/canva-logo.svg" alt="Canva" width="40" height="40">
+                        <span class="tool-label">Canva</span>
+                    </div>
+                    <div class="tool-item" title="CapCut — Video Editing">
+                        <img loading="lazy" src="images/capcut-logo.svg" alt="CapCut" width="40" height="40">
+                        <span class="tool-label">CapCut</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-category fade-in-up" style="margin-top: 40px;">
+                <h3 class="tools-subheading">
+                    <i class="ph ph-code" style="margin-right: 8px;"></i>Pengembangan &amp; Teknologi
+                </h3>
+                <div class="tools-grid">
+                    <div class="tool-item" title="HTML5 — Structured markup">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/html5" alt="HTML5">
+                        <span class="tool-label">HTML5</span>
+                    </div>
+                    <div class="tool-item" title="CSS3 — Styling &amp; responsive design">
+                        <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                            alt="CSS3" width="40" height="40">
+                        <span class="tool-label">CSS3</span>
+                    </div>
+                    <div class="tool-item" title="JavaScript (ES6+) — Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                        <span class="tool-label">JavaScript</span>
+                    </div>
+                    <div class="tool-item" title="React — Fundamentals">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/react" alt="React">
+                        <span class="tool-label">React</span>
+                    </div>
+                    <div class="tool-item" title="Node.js — Basics">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js">
+                        <span class="tool-label">Node.js</span>
+                    </div>
+                    <div class="tool-item" title="TypeScript — Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/typescript" alt="TypeScript">
+                        <span class="tool-label">TypeScript</span>
+                    </div>
+                    <div class="tool-item" title="Linux Ubuntu — Environment Exploration">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/linux" alt="Linux Ubuntu">
+                        <span class="tool-label">Linux</span>
+                    </div>
+                    <div class="tool-item" title="Supabase — Backend Database Exploration">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/supabase" alt="Supabase">
+                        <span class="tool-label">Supabase</span>
+                    </div>
+                    <div class="tool-item" title="PostgreSQL — Database Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL">
+                        <span class="tool-label">PostgreSQL</span>
+                    </div>
+                    <div class="tool-item" title="Android Studio — Deployment Workflow Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/androidstudio" alt="Android Studio">
+                        <span class="tool-label">Android Studio</span>
+                    </div>
+                    <div class="tool-item" title="Git — Version Control Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/git" alt="Git">
+                        <span class="tool-label">Git</span>
+                    </div>
+                    <div class="tool-item" title="GitHub — Collaboration &amp; Hosting">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/github" alt="GitHub" class="dark-invert">
+                        <span class="tool-label">GitHub</span>
+                    </div>
+                    <div class="tool-item" title="Bash — Command Line Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/gnubash" alt="Git Bash">
+                        <span class="tool-label">Bash</span>
+                    </div>
+                    <div class="tool-item" title="GitHub Actions — CI/CD Workflow Learning">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/githubactions" alt="GitHub Actions">
+                        <span class="tool-label">GH Actions</span>
+                    </div>
+                    <div class="tool-item" title="AI Prompt Engineering — Assisted Workflow">
+                        <img loading="lazy" src="https://cdn.simpleicons.org/openai" alt="AI Prompt Engineering" class="dark-invert">
+                        <span class="tool-label">AI / Prompting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Currently Learning Subsection -->
+            <div class="currently-learning fade-in-up" style="margin-top: 50px; text-align: center;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--text-primary);">Saat Ini Sedang Dipelajari &amp; Dikembangkan</h3>
+                <div class="pill-container" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 800px; margin: 0 auto;">
+                    <span class="pill" style="background: rgba(6, 182, 212, 0.1); border-color: var(--accent-primary); color: var(--accent-primary);"><i class="ph-bold ph-graduation-cap" style="margin-right: 5px;"></i> Dasar-dasar Teknik Informatika</span>
+                    <span class="pill"><i class="ph ph-linux-logo" style="margin-right: 5px;"></i> Administrasi Sistem Linux &amp; Setup Server</span>
+                    <span class="pill"><i class="ph ph-projector-screen" style="margin-right: 5px;"></i> Ekosistem React Lanjutan &amp; Manajemen State</span>
+                    <span class="pill"><i class="ph ph-database" style="margin-right: 5px;"></i> Integrasi Backend Supabase &amp; Skema SQL</span>
+                    <span class="pill"><i class="ph ph-shield-check" style="margin-right: 5px;"></i> Keamanan Siber &amp; Prinsip Jaringan</span>
+                    <span class="pill"><i class="ph ph-robot" style="margin-right: 5px;"></i> Prototyping Cepat Berbantuan AI &amp; Prompt Tuning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section bg-alt">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Rekomendasi</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonial-slider fade-in-up" aria-label="Slider rekomendasi">
+                <div class="testimonial-card glass-panel glow-border-card">
+                    <div class="quote"><i class="ph-fill ph-quotes"></i></div>
+                    <p>Richard adalah seorang profesional yang sangat disiplin dan berorientasi pada detail. Kemampuannya dalam mengelola administrasi personel dan laporan operasional sangat luar biasa.</p>
+                    <div class="author">— A. Wiryawan, Manajer Operasional</div>
+                    <div class="role-tag">PT. Provices Indonesia</div>
+                </div>
+                <div class="testimonial-card glass-panel glow-border-card">
+                    <div class="quote"><i class="ph-fill ph-quotes"></i></div>
+                    <p>Bekerja sama dengan Richard dalam proyek pemasaran digital adalah pengalaman yang luar biasa. Pengetahuannya tentang SEO dan keterampilan copywriting membantu kami mencapai hasil yang terukur.</p>
+                    <div class="author">— S. Nurhadi, Pimpinan Pemasaran Digital</div>
+                    <div class="role-tag">Kolaborasi Lepas</div>
+                </div>
+                <div class="testimonial-card glass-panel glow-border-card">
+                    <div class="quote"><i class="ph-fill ph-quotes"></i></div>
+                    <p>Kemampuan Richard untuk mengoordinasikan tim besar sambil mempertahankan dokumentasi yang akurat sangat mengesankan. Ia secara konsisten memberikan pekerjaan yang dapat diandalkan di bawah tekanan.</p>
+                    <div class="author">— D. Prasetyo, Kepala Divisi Keamanan</div>
+                    <div class="role-tag">PT. Provices Indonesia</div>
                 </div>
             </div>
         </div>
@@ -370,26 +780,26 @@
                 <div class="divider"></div>
             </div>
             <div class="contact-wrapper">
-                <div class="contact-info fade-in-up">
-                    <div class="contact-item glass-panel"
-                        onclick="window.open('https://maps.google.com/?q=Jl.+Babelan,+Kel.+Bahagia,+Bekasi,+Jawa+Barat', '_blank')"
-                        style="cursor: pointer;">
+                <div class="contact-info swipe-slider fade-in-up">
+                    <div class="contact-item glass-panel glow-border-card"
+                        onclick="window.open('https://maps.google.com/?q=Jl.+Babelan,+Kel.+Bahagia,+Bekasi,+West+Java', '_blank')"
+                        style="cursor: pointer;" role="button" tabindex="0" aria-label="Buka alamat di Google Maps">
                         <i class="ph-fill ph-map-pin"></i>
                         <div>
                             <h4>Alamat</h4>
                             <p>Jl. Babelan, Kel. Bahagia, Bekasi, Jawa Barat</p>
                         </div>
                     </div>
-                    <div class="contact-item glass-panel" onclick="window.open('https://wa.me/6285888102696', '_blank')"
-                        style="cursor: pointer;">
+                    <div class="contact-item glass-panel glow-border-card"
+                        onclick="window.open('https://wa.me/6285888102696', '_blank')" style="cursor: pointer;" role="button" tabindex="0" aria-label="Hubungi via WhatsApp">
                         <i class="ph-fill ph-whatsapp-logo"></i>
                         <div>
                             <h4>WhatsApp</h4>
-                            <p>+62 858-8810</p>
+                            <p>+62 858-8810-2696</p>
                         </div>
                     </div>
-                    <div class="contact-item glass-panel" onclick="window.location.href='mailto:[EMAIL_ADDRESS]'"
-                        style="cursor: pointer;">
+                    <div class="contact-item glass-panel glow-border-card"
+                        onclick="window.location.href='mailto:richardpl.meha@gmail.com'" style="cursor: pointer;" role="button" tabindex="0" aria-label="Kirim email">
                         <i class="ph-fill ph-envelope-simple"></i>
                         <div>
                             <h4>Email</h4>
@@ -397,9 +807,9 @@
                                     onclick="event.stopPropagation()">richardpl.meha@gmail.com</a></p>
                         </div>
                     </div>
-                    <div class="contact-item glass-panel"
+                    <div class="contact-item glass-panel glow-border-card"
                         onclick="window.open('https://www.linkedin.com/in/richard-patung-landu-meha-9099a3259', '_blank')"
-                        style="cursor: pointer;">
+                        style="cursor: pointer;" role="button" tabindex="0" aria-label="Buka profil LinkedIn">
                         <i class="ph-fill ph-linkedin-logo"></i>
                         <div>
                             <h4>LinkedIn</h4>
@@ -408,13 +818,36 @@
                         </div>
                     </div>
                 </div>
+                <form class="contact-form glass-panel fade-in-up" id="contactForm" novalidate aria-label="Kirim pesan">
+                    <h3>Kirim Pesan</h3>
+                    <div class="form-group">
+                        <label for="formName">Nama</label>
+                        <input type="text" id="formName" name="name" placeholder="Nama Anda" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="formEmail">Email</label>
+                        <input type="email" id="formEmail" name="email" placeholder="email@anda.com" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="formMessage">Pesan</label>
+                        <textarea id="formMessage" name="message" placeholder="Tulis pesan Anda di sini..." required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;" aria-label="Kirim pesan">
+                        <i class="ph ph-paper-plane-right" style="margin-right:8px;"></i>Kirim Pesan
+                    </button>
+                    <div class="form-status" id="formStatus" aria-live="polite"></div>
+                </form>
             </div>
         </div>
     </section>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas">
+        <i class="ph ph-arrow-up"></i>
+    </button>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Richard Patung Landu Meha. All rights reserved.</p>
+            <p>&copy; 2026 Richard Patung Landu Meha. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 
@@ -424,7 +857,7 @@
         <div class="modal-nav prev" id="modalPrev"><i class="ph ph-caret-left"></i></div>
         <div id="modalMediaContainer"
             style="display:flex; justify-content:center; align-items:center; width:100%; height:100%; position:relative;">
-            <img class="image-modal-content" id="modalImage" alt="Full View">
+            <img loading="lazy" class="image-modal-content" id="modalImage" alt="Full View">
             <video class="image-modal-content" id="modalVideo" controls autoplay
                 style="display:none; outline:none; max-width:90%; max-height:85vh; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.5);"></video>
         </div>
@@ -434,7 +867,9 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+
+
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Patung Landu Meha — CV ATS (Indonesia)</title>
+    <title>Richard Patung Landu Meha — CV ATS (Bahasa Indonesia)</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
             --bg-paper: #ffffff;
             --text-primary: #1a1a1a;
             --text-secondary: #4a5568;
-            --accent-color: #1d4e89; /* Biru tua elegan sesuai gambar */
+            --accent-color: #1d4e89; /* Dark blue matching image */
             --accent-light: #0e6ba8;
             --badge-bg: #e2e8f0;
             --badge-text: #1d4e89;
@@ -41,7 +41,7 @@
             min-height: 100vh;
         }
 
-        /* Container Kertas CV */
+        /* CV Paper Container */
         .cv-paper {
             background-color: var(--bg-paper);
             width: 100%;
@@ -52,7 +52,7 @@
             position: relative;
         }
 
-        /* Tombol Navigasi */
+        /* Floating action buttons */
         .action-bar {
             position: fixed;
             top: 20px;
@@ -93,7 +93,7 @@
             background-color: #555555;
         }
 
-        /* Header */
+        /* Header Styles */
         header {
             text-align: center;
             margin-bottom: 12px;
@@ -121,7 +121,7 @@
             margin: 6px 0 10px 0;
         }
 
-        /* Ringkasan */
+        /* Summary */
         .summary-text {
             font-size: 0.85rem;
             text-align: justify;
@@ -146,7 +146,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Highlight box */
         .highlight-bar {
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
             border-left: 4px solid var(--accent-color);
@@ -162,7 +161,7 @@
             color: var(--accent-color);
         }
 
-        /* Detail Pekerjaan & Pendidikan */
+        /* Job & Education Items */
         .item-block {
             margin-bottom: 12px;
             page-break-inside: avoid;
@@ -205,7 +204,7 @@
             color: var(--accent-color);
         }
 
-        /* Badge Grid */
+        /* Badge Grid for Skills & Tools */
         .badge-grid {
             display: flex;
             flex-wrap: wrap;
@@ -224,7 +223,7 @@
             display: inline-block;
         }
 
-        /* Projek */
+        /* Projects Section */
         .project-item {
             margin-bottom: 10px;
             page-break-inside: avoid;
@@ -244,7 +243,7 @@
             margin-bottom: 4px;
         }
 
-        /* Sertifikat */
+        /* Certificates list */
         .cert-item {
             margin-bottom: 6px;
             font-size: 0.82rem;
@@ -262,14 +261,14 @@
             font-weight: 500;
         }
 
-        /* Checkmark */
+        /* Checkmark icon */
         .checkmark {
             color: #16a34a;
             font-weight: bold;
             margin-right: 3px;
         }
 
-        /* Informasi Kontak */
+        /* Footer Info Section (Matches Image 1 bottom) */
         .footer-info {
             font-size: 0.8rem;
             border-top: 1.5px solid var(--border-color);
@@ -294,7 +293,7 @@
             color: var(--accent-color);
         }
 
-        /* Media Cetak (Print) */
+        /* Print Media Queries */
         @media print {
             body {
                 background-color: var(--bg-canvas) !important;
@@ -355,13 +354,13 @@
 </head>
 <body>
 
-    <!-- Tombol Navigasi -->
+    <!-- Floating Action Buttons -->
     <div class="action-bar">
         <a href="index.html" class="btn-action btn-secondary"><i class="ph ph-arrow-left"></i> Kembali ke Portofolio</a>
         <button onclick="window.print()" class="btn-action"><i class="ph ph-printer"></i> Cetak / Simpan PDF</button>
     </div>
 
-    <!-- Dokumen CV -->
+    <!-- CV Document -->
     <div class="cv-paper">
         <header>
             <h1 class="name">Richard Patung Landu Meha</h1>
@@ -371,113 +370,155 @@
             <div class="divider-double"></div>
         </header>
 
-        <!-- Ringkasan Profesional -->
+        <!-- Professional Summary -->
         <section id="summary">
             <p class="summary-text">
-                <strong>Profesional Administrasi Perkantoran</strong> dengan pengalaman kerja lebih dari 7 tahun, mengoordinasikan <strong>&plusmn;150 personel</strong>, serta mengelola administrasi operasional harian. Tersertifikasi resmi oleh <strong>BNSP sebagai Digital Marketer</strong> dengan spesialisasi dalam merancang strategi pemasaran modern, <strong>Search Engine Optimization (SEO)</strong>, penulisan iklan (copywriting) berkonversi tinggi, serta kampanye digital berbasis konversi. Terbukti mampu memadukan efisiensi manajerial perkantoran dengan kekuatan strategi pemasaran digital untuk mengoptimalkan alur kerja organisasi dan mendorong pertumbuhan brand.
+                <strong>Profesional Administrasi &amp; Operasional Keamanan</strong> dengan pengalaman kerja lebih dari 7 tahun, mengoordinasikan <strong>&plusmn;150 personel</strong> serta mengelola keamanan dan logistik harian divisi. Saat ini sedang aktif bertransisi ke ranah TI dan pengembangan web, mengejar gelar Sarjana ganda di <strong>Teknik Informatika</strong> dan <strong>Manajemen</strong>. Resmi tersertifikasi oleh <strong>BNSP sebagai Digital Marketer</strong>. Seorang pembelajar yang sangat disiplin yang menggunakan <strong>alur kerja pengembangan berbasis AI (Vibe Coding)</strong> untuk merancang prototipe perangkat lunak secara cepat dan merampingkan sistem operasional.
             </p>
         </section>
 
-        <!-- Highlight Bar -->
+        <!-- Core Highlight Bar -->
         <div class="highlight-bar">
-            <strong>Kompetensi Utama:</strong> Manajemen Perkantoran &amp; Administrasi Database, Sistem Absensi &amp; Penggajian, Koordinasi Tim (&plusmn;150 Personel), Strategi Pemasaran Digital (SEO, Strategi Konten, Integrasi Checkout WhatsApp).
+            <strong>Kompetensi Utama:</strong> Administrasi Operasional Keamanan, Koordinasi Personel (&plusmn;150 Personel), Pengembangan Perangkat Lunak Berbantuan AI, Tumpukan Teknologi &amp; Alat (React JS, Linux, Supabase, Git, Android Studio Deployment).
         </div>
 
-        <!-- Mastered Tools & Technologies Section -->
+        <!-- Tech Stack & Development Tools Section -->
         <section id="tools">
-            <h2 class="section-title">Alat &amp; Teknologi Yang Dikuasai</h2>
+            <h2 class="section-title">Tech Stack &amp; Development Tools</h2>
             <div class="badge-grid">
                 <span class="badge">Microsoft Office (Word, Excel, PowerPoint)</span>
                 <span class="badge">Google Workspace (Docs, Sheets, Forms, Drive)</span>
                 <span class="badge">Google Analytics</span>
                 <span class="badge">SEO &amp; Copywriting</span>
-                <span class="badge">Canva</span>
-                <span class="badge">CapCut (Penyuntingan Video)</span>
-                <span class="badge">HTML5</span>
-                <span class="badge">CSS3</span>
-                <span class="badge">JavaScript</span>
+                <span class="badge">Canva &amp; CapCut</span>
+                <span class="badge">HTML5 &amp; CSS3</span>
+                <span class="badge">JavaScript (ES6+)</span>
+                <span class="badge">React JS (Fundamentals)</span>
+                <span class="badge">NodeJS (Basics)</span>
+                <span class="badge">TypeScript (Basics)</span>
+                <span class="badge">Linux Ubuntu (Environment)</span>
+                <span class="badge">Supabase &amp; SQL</span>
+                <span class="badge">Android Studio Deployment</span>
+                <span class="badge">GitHub Actions (CI/CD)</span>
+                <span class="badge">AI Prompt Engineering &amp; Workflows</span>
                 <span class="badge">Git &amp; GitHub</span>
-                <span class="badge">Git Bash</span>
             </div>
         </section>
 
-        <!-- Pengalaman Kerja -->
+        <!-- Professional Work Experience -->
         <section id="experience">
-            <h2 class="section-title">Pengalaman Kerja</h2>
+            <h2 class="section-title">Work Experience</h2>
             
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Administrasi Divisi Satpam</span>
-                    <span class="item-meta">2021 – 2026 | PT. Provices Indonesia — Kementerian Perdagangan RI</span>
+                    <span class="item-title-company">Security Division Administration</span>
+                    <span class="item-meta">2021 – 2026 | PT. Provices Indonesia — Ministry of Trade RI</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Koordinasi Personel:</strong> Berhasil mengoordinasikan dan memonitor kinerja <strong>&plusmn;150 personel</strong> yang tersebar di 10 gedung operasional.</li>
-                    <li><strong>Database Administrasi:</strong> Mengelola data kontrol operasional, absensi karyawan, timesheet, serta pemutakhiran database personel secara terstruktur.</li>
-                    <li><strong>Penjadwalan &amp; Penggajian:</strong> Menyusun jadwal kerja operasional bulanan dan mengelola rekapitulasi absensi sebagai dasar verifikasi penggajian.</li>
-                    <li><strong>Pelaporan Manajemen:</strong> Menyusun laporan operasional dan administrasi berkala untuk bahan evaluasi manajemen pimpinan.</li>
+                    <li><strong>Personnel Coordination:</strong> Successfully coordinated and monitored the performance of <strong>&plusmn;150 personnel</strong> across 10 operational buildings.</li>
+                    <li><strong>Administrative Database:</strong> Managed operational data control, employee timesheets, attendance records, and structured database updating.</li>
+                    <li><strong>Payroll &amp; Scheduling:</strong> Designed operational work schedules and processed monthly payroll administration checks.</li>
+                    <li><strong>Management Reporting:</strong> Drafted periodic operational and administrative reports for management evaluation.</li>
                 </ul>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Administrasi Divisi Satpam</span>
-                    <span class="item-meta">2019 – 2021 | PT. Provices Indonesia — Apartemen The Wave, Jaksel</span>
+                    <span class="item-title-company">Security Division Administration</span>
+                    <span class="item-meta">2019 – 2021 | PT. Provices Indonesia — The Wave Apartment, South Jakarta</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Pemeliharaan Database:</strong> Mengarsipkan dokumen kepegawaian, absensi bulanan, dan timesheet secara sistematis.</li>
-                    <li><strong>Administrasi Barang:</strong> Memproses permintaan barang kebutuhan operasional dan mendokumentasikan inventaris kantor secara tertib.</li>
-                    <li><strong>Pelaporan Kinerja:</strong> Membuat laporan kinerja operasional bulanan untuk bahan pelaporan kepada Property Manager.</li>
+                    <li><strong>Database Upkeep:</strong> Controlled personnel archives, attendance recaps, and monthly timesheets systematically.</li>
+                    <li><strong>Procurement Administration:</strong> Processed physical goods requests and managed office supply documentation.</li>
+                    <li><strong>Reporting:</strong> Developed operational performance reports for property manager evaluations.</li>
                 </ul>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Anggota Security</span>
-                    <span class="item-meta">2018 – 2019 | PT. Uremessing Guard — Departement 18th Rasuna Said, Jaksel</span>
+                    <span class="item-title-company">Security Guard</span>
+                    <span class="item-meta">2018 – 2019 | PT. Uremessing Guard — Department 18th Rasuna Said, South Jakarta</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Keamanan Operasional:</strong> Menjaga akses masuk gedung, mengamankan tamu, dan menegakkan protokol keamanan lingkungan kerja.</li>
-                    <li><strong>Pencegahan Gangguan:</strong> Melaksanakan patroli terjadwal ke area gedung guna mencegah potensi gangguan keamanan fisik.</li>
-                    <li><strong>Pelaporan Kegiatan:</strong> Melaporkan jurnal kegiatan pengamanan harian kepada pimpinan secara digital dan real-time.</li>
+                    <li><strong>Operations Security:</strong> Managed guest reception, secured access points, and enforced building security protocols.</li>
+                    <li><strong>Incident Prevention:</strong> Monitored building premises through structured patrols to prevent safety disturbances.</li>
+                    <li><strong>Reporting:</strong> Reported daily security logs and incident briefs via coordinated digital channels.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Projek Web & App -->
+        <!-- Projects Section -->
         <section id="projects">
-            <h2 class="section-title">Projek Web &amp; Aplikasi Yang Dikembangkan</h2>
+            <h2 class="section-title">Proyek Web &amp; Aplikasi yang Dikembangkan</h2>
             
             <div class="project-item">
-                <div class="project-title">Aplikasi AI English Assistant</div>
-                <p class="project-desc">Aplikasi percakapan interaktif berbasis kecerdasan buatan (AI) yang dirancang untuk membantu pengguna menguasai tata bahasa, percakapan, dan kosakata bahasa Inggris secara real-time. Dibangun dengan HTML, CSS, dan integrasi API yang bersih.</p>
+                <div class="project-title">AI Asisten Bahasa Inggris</div>
+                <p class="project-desc">Aplikasi percakapan interaktif bertenaga AI yang dirancang untuk membantu pengguna menguasai tata bahasa, berbicara, dan kosakata bahasa Inggris secara real time. Dibangun dengan integrasi API, CSS, dan HTML yang bersih.</p>
             </div>
 
             <div class="project-item">
                 <div class="project-title">SaaS HRIS Si Presensi</div>
-                <p class="project-desc">Sistem Informasi Sumber Daya Manusia tingkat perusahaan dan aplikasi pencatatan absensi digital yang dilengkapi fitur pembatasan wilayah geografis (geofencing) real-time dan pelaporan lembar waktu (timesheet) otomatis.</p>
+                <p class="project-desc">Sistem Informasi Sumber Daya Manusia skala perusahaan dan aplikasi presensi digital yang menampilkan pembatasan wilayah (geofencing) real-time dan pelaporan timesheet otomatis.</p>
             </div>
 
             <div class="project-item">
                 <div class="project-title">E-Commerce &amp; Profil Apotek</div>
-                <p class="project-desc">Website profil bisnis apotek dan toko obat online lengkap dengan kategori produk terstruktur, kalkulasi keranjang belanja dinamis, serta integrasi checkout langsung ke WhatsApp pimpinan.</p>
+                <p class="project-desc">Profil bisnis apotek dan toko obat online berfitur lengkap yang menampilkan kategori produk terstruktur, perhitungan keranjang belanja dinamis, dan integrasi checkout WhatsApp langsung.</p>
             </div>
 
             <div class="project-item">
-                <div class="project-title">JDC Secure Parking System</div>
-                <p class="project-desc">Prototipe sistem manajemen parkir digital tangguh dengan pengecekan ketersediaan slot real-time, validasi pemesanan tiket parkir aman, dan verifikasi gerbang masuk-keluar parkir.</p>
+                <div class="project-title">Sistem Parkir JDC Secure</div>
+                <p class="project-desc">Prototipe sistem manajemen parkir digital yang tangguh dengan pengecekan slot real-time, validasi pemesanan yang aman, dan verifikasi pass gerbang parkir.</p>
             </div>
         </section>
 
-        <!-- Pendidikan -->
+        <!-- Education Section -->
         <section id="education">
-            <h2 class="section-title">Riwayat Akademik</h2>
+            <h2 class="section-title">Pendidikan</h2>
+            
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Sarjana Ekonomi Syariah (S.E.)</span>
+                    <span class="item-title-company">S1 Teknik Informatika (Berjalan)</span>
+                    <span class="item-meta">2024 – Sekarang | Universitas Siber Muhammadiyah</span>
+                </div>
+                <ul class="bullets">
+                    <li><strong>Area Fokus:</strong> Dasar-dasar rekayasa perangkat lunak, basis data, jaringan, dan pengembangan aplikasi web modern.</li>
+                    <li>
+                        <strong>Bidang Utama yang Dipelajari:</strong> 
+                        <span class="checkmark">✔</span> Pemrograman &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Ekosistem React &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Linux &amp; Git &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Relational Databases &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> GitHub Actions
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title-company">S1 Manajemen (Berjalan)</span>
+                    <span class="item-meta">2024 – Sekarang | STIE Tunas Nusantara</span>
+                </div>
+                <ul class="bullets">
+                    <li><strong>Area Fokus:</strong> Logistik operasional, kepemimpinan, perilaku organisasi, manajemen bisnis strategis, dan administrasi.</li>
+                    <li>
+                        <strong>Bidang Utama yang Dipelajari:</strong> 
+                        <span class="checkmark">✔</span> Operasional &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Sumber Daya Manusia &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Logistik &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Kepemimpinan &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Manajemen Risiko
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title-company">S1 Ekonomi Syariah (S.E.)</span>
                     <span class="item-meta">2021 – 2024 | STEBIS NUR ILMI AL-ISMAILIYUN</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Prestasi Akademik:</strong> Lulus dengan predikat sangat memuaskan dengan **IPK: 3.8 / 4.0**.</li>
+                    <li><strong>Keunggulan Akademik:</strong> Lulus dengan <strong>IPK tinggi 3.8 / 4.0</strong>.</li>
                     <li>
                         <strong>Mata Kuliah Relevan:</strong> 
                         <span class="checkmark">✔</span> Administrasi &nbsp;&nbsp;&nbsp;&nbsp;
@@ -490,56 +531,56 @@
             </div>
         </section>
 
-        <!-- Sertifikat -->
+        <!-- Professional Certificates & Achievements -->
         <section id="certificates">
-            <h2 class="section-title">Sertifikat &amp; Keahlian</h2>
+            <h2 class="section-title">Sertifikat &amp; Kredensial</h2>
             
             <div class="cert-item">
-                • <span class="cert-title-year">Pelatihan & Certified BNSP Digital Marketing (CDM) / 2026</span> — 
+                • <span class="cert-title-year">Sertifikasi Digital Marketing BNSP (CDM) / 2026</span> — 
                 <span class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP) / LKP Novasa</span>. 
-                (Digital Marketing Fundamental, SEO, SEM, Social Media, Content Marketing, Analytics).
+                (Dasar Pemasaran Digital, SEO, SEM, Media Sosial, Pemasaran Konten, Analitik).
             </div>
 
             <div class="cert-item">
                 • <span class="cert-title-year">Certified Public Speaking (CPS) / 2026</span> — 
                 <span class="cert-issuer">LKP WellldoneSkills Nawara Pratama</span>. 
-                (Public Speaking Fundamental, Teknik Komunikasi Efektif, Penguasaan Panggung, Body Language, Vocal Power, dan Presentation Skill).
+                (Public Speaking, Komunikasi Efektif, Keterampilan Presentasi).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertificate Microsoft Office / 2024</span> — 
-                <span class="cert-issuer">LKP Borju Digital & Kursus Digital</span>. 
-                (Microsoft Office Administration – Data Management, Administrative Reporting, Professional Documentation, Presentation Development, & Digital Office Operations).
+                • <span class="cert-title-year">Sertifikat Microsoft Office / 2024</span> — 
+                <span class="cert-issuer">Borju Digital &amp; Digital Course LKP</span>. 
+                (Manajemen Data, Pelaporan Administratif, Dokumentasi Profesional, Pengembangan Presentasi, &amp; Operasional Kantor Digital).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertificate Digital Marketing: Copywriting / 2024</span> — 
+                • <span class="cert-title-year">Sertifikat Digital Marketing: Copywriting / 2024</span> — 
                 <span class="cert-issuer">Belajar Skill</span>. 
-                (Copywriting, Content Writing, SEO Basic, Social Media Marketing, Pembuatan Konten Promosi, Strategi Branding, & Digital Campaign).
+                (Copywriting, Penulisan Konten, Dasar SEO, Kampanye Promosi).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Microsoft Office Admin Kantor / 2021</span> — 
+                • <span class="cert-title-year">Admin Microsoft Office / 2021</span> — 
                 <span class="cert-issuer">Sans Smart</span>. 
-                (Administrasi Perkantoran, Pengolahan Data Excel, Surat & Dokumen, Arsip Digital, Laporan, & Google Workspace).
+                (Administrasi Perkantoran, Pengolahan Data Excel, Surat &amp; Dokumen, Arsip Digital).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikat Beladiri Ijazah Karate / 2020</span> — 
+                • <span class="cert-title-year">Sertifikat Bela Diri Karate / 2020</span> — 
                 <span class="cert-issuer">PT. Provices Group</span>. 
-                (Teknik Pertahanan Diri, Ketahanan Fisik & Mental, Refleks, & Manajemen Konflik Dasar Cepat).
+                (Bela Diri, Ketahanan Mental, Refleks, Manajemen Konflik).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikat Ijazah Gada Pratama / 2019</span> — 
+                • <span class="cert-title-year">Sertifikat Gada Pratama / 2019</span> — 
                 <span class="cert-issuer">PT. Evan Putra Jaya</span>. 
-                (Dasar-dasar Pengamanan, Prosedur Keamanan, Akses Tamu, Problem Solving Lapangan, Kerja Sama Tim, Disiplin & SOP).
+                (Operasi Keamanan Dasar, Kontrol Akses, Prosedur Darurat, SOP).
             </div>
         </section>
 
-        <!-- Informasi Kontak (Bagian Bawah) -->
+        <!-- Detailed Contact Info (Matches image layout) -->
         <section id="contact-info-footer">
-            <h2 class="section-title">Informasi Kontak</h2>
+            <h2 class="section-title">Info Kontak</h2>
             <div class="footer-info">
                 <table>
                     <tr>
@@ -556,14 +597,14 @@
                     </tr>
                     <tr>
                         <td class="label">Portofolio:</td>
-                        <td colspan="3">https://rihard-cyber.github.io/Indo-Portfolio-Administrasi-Digital-Marketing-/</td>
+                        <td colspan="3">https://rihard-cyber.github.io/richard-portfoliofulleng/</td>
                     </tr>
                 </table>
             </div>
         </section>
     </div>
 
-    <!-- Cetak otomatis jika query ?print=true -->
+    <!-- Automatically Trigger Print Dialog if URL contains print=true -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
