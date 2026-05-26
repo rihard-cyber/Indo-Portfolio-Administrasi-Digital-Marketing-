@@ -1,0 +1,17 @@
+{
+    "name": "Richard Patung Landu Meha — Portfolio",
+    "short_name": "Richard PLM",
+    "description": "Profesional Administrasi Perkantoran, Digital Marketer Tersertifikasi BNSP & Penggemar Teknologi",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0B0F19",
+    "theme_color": "#06B6D4",
+    "icons": [
+        {
+            "src": "images/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
