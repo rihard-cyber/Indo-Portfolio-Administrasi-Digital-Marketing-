@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', resize);
 
         const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-        const lineCount = isTouch ? 15 : 35;
-        const particleCount = isTouch ? 20 : 50;
+        const lineCount = isTouch ? 20 : 50;
+        const particleCount = isTouch ? 30 : 70;
 
         // Layer 2: Falling Light Lines
         const lines = [];
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 width: Math.random() * 2 + 0.5,
                 height: Math.random() * 120 + 40,
                 speed: Math.random() * 1.5 + 0.5,
-                opacity: Math.random() * 0.15 + 0.03,
+                opacity: Math.random() * 0.35 + 0.1,
                 hue: Math.random() > 0.5 ? 182 : 260,
             });
         }
