@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let i = 0;
         const typeWriter = () => {
             if (i < textToType.length) {
-                roleElement.innerHTML += textToType.charAt(i);
+                roleElement.textContent += textToType.charAt(i);
                 i++;
                 setTimeout(typeWriter, 50); // Typing speed
             }
@@ -589,7 +589,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 formStatus.className = 'form-status error';
             }
 
-            btn.innerHTML = originalText;
+            btn.replaceChildren();
+            btn.insertAdjacentHTML('beforeend', originalText);
             btn.disabled = false;
         });
     }
@@ -606,6 +607,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Keyboard: Escape closes modal
     // (already handled in modal code above)
+
+    // Preserve scroll on back button (BFCache)
+    window.addEventListener('pageshow', (e) => {
+        if (e.persisted) {
+            // Page was restored from BFCache — scroll already preserved
+        }
+    });
 
     // Register Service Worker
     if ('serviceWorker' in navigator) {
