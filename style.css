@@ -1771,18 +1771,57 @@ p strong:hover {
     cursor: pointer;
 }
 
-/* ===== NEW EFFECTS & ANIMATIONS ===== */
+/* ===== BACKGROUND CONTAINER (3 LAPIS) ===== */
 
-/* Cyber Background Canvas */
-#cyber-bg {
+#bg-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    /* Layer 1: Animated Gradient */
+    background: linear-gradient(135deg, #0b1120, #0f1f3a, #1a1145, #0b1120);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    25%  { background-position: 100% 0%; }
+    50%  { background-position: 100% 100%; }
+    75%  { background-position: 0% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+#bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    opacity: 0.6;
+}
+
+/* ===== CONTENT WRAPPER ===== */
+
+#content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== GLASSMORPHISM UPGRADE ===== */
+.glass-panel,
+.glass-card,
+.data-project-card,
+.stat-card,
+.contact-item,
+.contact-form,
+.edu-card,
+.cert-card,
+.timeline-item .timeline-content,
+.web-card {
+    background: rgba(11, 17, 32, 0.55) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(6, 182, 212, 0.12) !important;
 }
 
 /* Custom Cursor */
