@@ -331,10 +331,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic Stats Logic
     const currentYear = new Date().getFullYear();
-    const startYear = 2018; // Tahun mulai bekerja (Job 1)
+    const startYear = 2018;
     const expStatEl = document.getElementById('stat-experience');
     if (expStatEl) {
-        // Otomatis hitung tahun berjalan dikurang tahun mulai
         const yearsOfExp = Math.max(1, currentYear - startYear);
         const label = expStatEl.getAttribute('data-label') || '+ Tahun';
         expStatEl.innerText = `${yearsOfExp}${label}`;
@@ -343,9 +342,103 @@ document.addEventListener('DOMContentLoaded', () => {
     const certCards = document.querySelectorAll('.cert-card');
     const certStatEl = document.getElementById('stat-certificates');
     if (certStatEl && certCards.length > 0) {
-        // Otomatis hitung jumlah elemen sertifikat di DOM
         certStatEl.innerText = `${certCards.length}+`;
     }
+
+    // ===== ANIMATED COUNTERS =====
+    function animateCounter(el, target, suffix = '') {
+        const duration = 1500;
+        const steps = 60;
+        const increment = target / steps;
+        let current = 0;
+        let step = 0;
+        const timer = setInterval(() => {
+            step++;
+            current = Math.min(current + increment, target);
+            el.textContent = Math.floor(current) + suffix;
+            if (step >= steps) {
+                el.textContent = target + suffix;
+                clearInterval(timer);
+            }
+        }, duration / steps);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const text = el.textContent.trim();
+                const match = text.match(/^(\d+)(\+)?/);
+                if (match) {
+                    const target = parseInt(match[1]);
+                    const suffix = match[2] || '';
+                    el.textContent = '0';
+                    animateCounter(el, target, suffix);
+                }
+                counterObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+    // ===== PARTICLES BACKGROUND =====
+    const hero = document.querySelector('#hero');
+    if (hero && !isTouchDevice) {
+        const canvas = document.createElement('canvas');
+        canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;';
+        canvas.width = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+        hero.style.position = 'relative';
+        hero.insertBefore(canvas, hero.firstChild);
+
+        const ctx = canvas.getContext('2d');
+        const particles = [];
+        const count = 60;
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: Math.random() * 2 + 1,
+                dx: (Math.random() - 0.5) * 0.5,
+                dy: (Math.random() - 0.5) * 0.5,
+                o: Math.random() * 0.5 + 0.1
+            });
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(6, 182, 212, ${p.o})`;
+                ctx.fill();
+                p.x += p.dx;
+                p.y += p.dy;
+                if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+            });
+            requestAnimationFrame(drawParticles);
+        }
+        drawParticles();
+
+        window.addEventListener('resize', () => {
+            canvas.width = hero.offsetWidth;
+            canvas.height = hero.offsetHeight;
+        });
+    }
+
+    // ===== SMOOTH SECTION REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+            }
+        });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.section').forEach(s => revealObserver.observe(s));
 
     // ===== Theme Switcher Logic =====
     const themeBtn = document.getElementById('theme-toggle');

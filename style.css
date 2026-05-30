@@ -2401,8 +2401,9 @@ button:focus-visible,
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px) scale(1.03);
     border-color: rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.1);
 }
 
 .stat-icon {
@@ -2441,8 +2442,20 @@ button:focus-visible,
 }
 
 .data-project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px) scale(1.02);
     border-color: rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 0 25px rgba(var(--accent-rgb), 0.08);
+}
+
+.data-project-card:hover .dp-icon {
+    background: rgba(var(--accent-rgb), 0.2);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.data-project-card:hover .dp-icon i {
+    color: var(--accent-secondary);
+    transition: color 0.3s ease;
 }
 
 .dp-icon {
@@ -2595,4 +2608,26 @@ button:focus-visible,
         height: 42px;
         font-size: 1.1rem;
     }
+}
+
+/* ===== SECTION REVEAL ANIMATION ===== */
+.section {
+    opacity: 0.01;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== STAT COUNTER STYLING ===== */
+.stat-number {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-number {
+    color: var(--accent-primary);
 }
