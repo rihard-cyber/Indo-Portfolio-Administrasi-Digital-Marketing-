@@ -1,4 +1,145 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // ===== CYBER BACKGROUND GRID =====
+    const cyberCanvas = document.getElementById('cyber-bg');
+    if (cyberCanvas) {
+        const ctx = cyberCanvas.getContext('2d');
+        let W, H;
+        const resize = () => {
+            W = cyberCanvas.width = window.innerWidth;
+            H = cyberCanvas.height = window.innerHeight;
+        };
+        resize();
+        window.addEventListener('resize', resize);
+
+        const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        if (isTouch) { cyberCanvas.style.opacity = '0.3'; }
+
+        // Grid config
+        const gridConfig = {
+            perspective: 0.35,
+            lineColor: '6, 182, 212',
+            lineOpacity: 0.08,
+            animateSpeed: 0.0003,
+            waveAmp: 2,
+        };
+
+        // Particles
+        const particles = [];
+        const pCount = Math.min(40, Math.floor(W * H / 30000));
+        for (let i = 0; i < pCount; i++) {
+            particles.push({
+                x: Math.random() * W,
+                y: Math.random() * H,
+                r: Math.random() * 1.5 + 0.5,
+                dx: (Math.random() - 0.5) * 0.15,
+                dy: -(Math.random() * 0.2 + 0.05),
+                o: Math.random() * 0.3 + 0.05,
+                sides: Math.random() > 0.5 ? 6 : 4,
+            });
+        }
+
+        let time = 0;
+
+        function drawCyberBg() {
+            time += gridConfig.animateSpeed;
+            ctx.clearRect(0, 0, W, H);
+
+            // --- Grid ---
+            const vanishY = H * gridConfig.perspective;
+            const horizon = vanishY;
+            const maxRows = 24;
+            const maxCols = 20;
+
+            ctx.strokeStyle = `rgba(${gridConfig.lineColor}, ${gridConfig.lineOpacity})`;
+            ctx.lineWidth = 0.5;
+
+            // Horizontal lines (perspective: closer near bottom)
+            for (let i = 0; i <= maxRows; i++) {
+                const t = i / maxRows;
+                const y = horizon + (H - horizon) * t * t;
+                const wave = Math.sin(time * 3 + i * 0.3) * gridConfig.waveAmp * t;
+                const spread = 20 + t * (W * 0.48);
+
+                const x1 = W / 2 - spread + wave;
+                const x2 = W / 2 + spread + wave;
+
+                ctx.globalAlpha = 0.4 - t * 0.35;
+                ctx.beginPath();
+                ctx.moveTo(x1, y + wave * 0.3);
+                ctx.lineTo(x2, y + wave * 0.3);
+                ctx.stroke();
+            }
+
+            // Vertical lines (perspective)
+            for (let i = -maxCols / 2; i <= maxCols / 2; i++) {
+                const t = Math.abs(i) / (maxCols / 2);
+                const bottomX = W / 2 + i * (W * 0.04);
+                const topX = W / 2 + i * (W * 0.005);
+                const wave = Math.sin(time * 2 + i * 0.5) * gridConfig.waveAmp * 0.5;
+
+                ctx.globalAlpha = 0.3 - t * 0.25;
+                ctx.beginPath();
+                ctx.moveTo(topX + wave, horizon + wave * 0.2);
+                ctx.lineTo(bottomX + wave, H);
+                ctx.stroke();
+            }
+
+            ctx.globalAlpha = 1;
+
+            // --- Floating Particles ---
+            particles.forEach(p => {
+                p.x += p.dx + Math.sin(time * 2 + p.y * 0.01) * 0.1;
+                p.y += p.dy;
+
+                if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
+                if (p.x < -10) p.x = W + 10;
+                if (p.x > W + 10) p.x = -10;
+
+                ctx.fillStyle = `rgba(${gridConfig.lineColor}, ${p.o})`;
+                ctx.beginPath();
+
+                if (p.sides === 6) {
+                    // Hexagon
+                    for (let j = 0; j < 6; j++) {
+                        const angle = (Math.PI / 3) * j - Math.PI / 6 + Math.sin(time + p.x * 0.01) * 0.05;
+                        const px = p.x + p.r * Math.cos(angle);
+                        const py = p.y + p.r * Math.sin(angle);
+                        j === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+                    }
+                } else {
+                    // Diamond
+                    ctx.moveTo(p.x, p.y - p.r * 1.4);
+                    ctx.lineTo(p.x + p.r * 1.4, p.y);
+                    ctx.lineTo(p.x, p.y + p.r * 1.4);
+                    ctx.lineTo(p.x - p.r * 1.4, p.y);
+                }
+                ctx.closePath();
+                ctx.fill();
+            });
+
+            // --- Connection lines between nearby particles ---
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        ctx.strokeStyle = `rgba(${gridConfig.lineColor}, ${0.04 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.3;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(drawCyberBg);
+        }
+
+        drawCyberBg();
+    }
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
