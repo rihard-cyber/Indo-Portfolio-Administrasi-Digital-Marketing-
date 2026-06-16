@@ -571,7 +571,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // TODO: Ganti dengan Formspree form ID kamu. Daftar gratis di https://formspree.io
-                const response = await fetch('https://formspree.io/f/your-form-id', {
+                const response = await fetch('https://formspree.io/f/xdavjwqq', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ name, email, message })
@@ -618,7 +618,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js').catch(() => {
+            navigator.serviceWorker.register('./sw.js').catch(() => {
                 // SW registration failed silently
             });
         });

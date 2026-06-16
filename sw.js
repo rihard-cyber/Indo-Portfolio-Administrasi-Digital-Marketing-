@@ -1,12 +1,12 @@
 const CACHE_NAME = 'richard-portfolio-v2';
 const ASSETS = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/manifest.json',
-    '/images/favicon.svg',
-    '/images/foto-profil.jpg'
+    './',
+    './index.html',
+    './style.css',
+    './script.js',
+    './manifest.json',
+    './images/favicon.svg',
+    './images/foto-profil.jpg'
 ];
 
 self.addEventListener('install', event => {
