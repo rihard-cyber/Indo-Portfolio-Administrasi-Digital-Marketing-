@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Patung Landu Meha — CV ATS (Bahasa Indonesia)</title>
+    <title>Richard Patung Landu Meha — CV ATS (English)</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -360,9 +360,9 @@
 
     <!-- Floating Action Buttons -->
     <div class="action-bar">
-        <a href="index.html" class="btn-action btn-secondary"><i class="ph ph-arrow-left"></i> Kembali ke Portofolio</a>
-        <a href="en/cv-ats.html" class="btn-action btn-secondary" onclick="event.preventDefault(); window.location.href = window.location.pathname.replace(/\/cv-ats\.html$/, '').replace(/\/$/, '') + '/en/cv-ats.html';"><i class="ph ph-globe"></i> English CV</a>
-        <button onclick="window.print()" class="btn-action"><i class="ph ph-printer"></i> Cetak / Simpan PDF</button>
+        <a href="index.html" class="btn-action btn-secondary"><i class="ph ph-arrow-left"></i> Back to Portfolio</a>
+        <a href="../cv-ats.html" class="btn-action btn-secondary" onclick="event.preventDefault(); window.location.href = window.location.pathname.replace(/\/en\/cv-ats\.html$/, '').replace(/\/$/, '') + '/cv-ats.html';"><i class="ph ph-globe"></i> Indonesian CV</a>
+        <button onclick="window.print()" class="btn-action"><i class="ph ph-printer"></i> Print / Save PDF</button>
     </div>
 
     <!-- CV Document -->
@@ -376,23 +376,25 @@
         </header>
 
         <!-- Professional Summary -->
+        <section id="summary">
             <p class="summary-text">
-                Saya adalah profesional di bidang <strong>Administrasi &amp; Entri Data</strong> dengan pengalaman lebih dari 7 tahun dalam mengelola basis data personel dan operasional—mulai dari entri data untuk 180+ karyawan (mencakup NIK, jabatan, BPJS, NPWP, dan data pensiun), pengelolaan absensi (timesheet) selama 81 bulan berturut-turut, penjadwalan shift, penyusunan rencana kerja operasional (Master Plan), hingga pembuatan laporan manajemen (CCTV, Patroli Sapu Jagat, dan Resume Laporan Bulanan). Saya memiliki keahlian mendalam dalam mengoperasikan Microsoft Excel, Google Workspace, dan sistem HRIS digital. Saat ini, saya sedang menempuh pendidikan tingkat Sarjana ganda di jurusan <strong>Teknik Informatika</strong> dan <strong>Manajemen</strong>, serta telah tersertifikasi sebagai <strong>Digital Marketer oleh BNSP</strong>. Saya juga terbiasa menggunakan alur kerja berbasis AI untuk meningkatkan efisiensi operasional dan akurasi data.
+                I am an <strong>Administration &amp; Data Entry Specialist</strong> with over 7 years of professional experience managing personnel databases and operations—ranging from entering data for 180+ employees (including NIK, positions, BPJS, NPWP, and pension data), processing timesheets for 81 consecutive months (Sept 2019–May 2026), shift scheduling, formulating operational security plans (Master Plans), to compiling management reports (CCTV logs, Patroli Sapu Jagat patrol sheets, and Monthly Resume Reports). I have deep expertise in Microsoft Excel, Google Workspace (Sheets, Forms, Apps Script), and digital HRIS platforms. Currently, I am pursuing dual Bachelor's degrees in <strong>Informatics Engineering</strong> and <strong>Management</strong>, and am certified as a <strong>Digital Marketer by BNSP</strong>. I am highly proficient in using AI-assisted workflows to optimize operational efficiency and ensure data accuracy.
             </p>
+        </section>
 
         <!-- Core Highlight Bar -->
         <div class="highlight-bar">
-            <strong>Kompetensi Utama:</strong> Entri Data &amp; Pengelolaan Basis Data, Administrasi Operasional, Google Workspace (Sheets, Forms, Apps Script), Microsoft Excel (Vlookup, Pivot Tables, Validasi Data), Pemrosesan Absensi &amp; Payroll, Koordinasi Personel (&plusmn;150 Personel), Penjadwalan &amp; Rotasi Shift, Pengembangan Frontend (React, Vite, Firebase).
+            <strong>Key Competencies:</strong> Data Entry &amp; Database Management, Google Workspace (Sheets, Forms, Apps Script), Microsoft Excel (Vlookup, Pivot Tables, Data Validation), Timesheet &amp; Payroll Administration, Personnel Coordination (&plusmn;150), Scheduling &amp; Shift Rotation, Frontend Development (React, Vite, Firebase).
         </div>
 
         <!-- Tech Stack & Development Tools Section -->
         <section id="tools">
-            <h2 class="section-title">Teknologi &amp; Alat Pengembangan</h2>
+            <h2 class="section-title">Tech Stack &amp; Development Tools</h2>
             <div class="badge-grid">
                 <span class="badge">Microsoft Office (Word, Excel, PowerPoint)</span>
                 <span class="badge">Google Workspace (Docs, Sheets, Forms, Drive, Apps Script)</span>
                 <span class="badge">Data Entry &amp; Database Management</span>
-                <span class="badge">Data Validation &amp; Accuracy Control</span>
+                <span class="badge">Data Validation &amp; Quality Control</span>
                 <span class="badge">Firebase Firestore (Real-time DB)</span>
                 <span class="badge">Apache Capacitor (Android Native)</span>
                 <span class="badge">Google Analytics</span>
@@ -415,119 +417,119 @@
 
         <!-- Professional Work Experience -->
         <section id="experience">
-            <h2 class="section-title">Pengalaman Kerja</h2>
+            <h2 class="section-title">Work Experience</h2>
             
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Administrasi Divisi Keamanan &amp; Data Entry</span>
-                    <span class="item-meta">2021 – 2026 | PT. Provices Indonesia — Kementerian Perdagangan RI</span>
+                    <span class="item-title-company">Security Division Administration</span>
+                    <span class="item-meta">2021 – 2026 | PT. Provices Indonesia — Ministry of Trade RI</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Pengelolaan Data &amp; Basis Data:</strong> Mengentri dan memelihara basis data untuk lebih dari 150 personel (mencakup NIK, jabatan, lokasi penugasan, NPWP, BPJS, dan data pensiun) secara terstruktur serta merancang Struktur Organisasi operasional tim.</li>
-                    <li><strong>Google Forms &amp; Otomatisasi:</strong> Merancang dan mengelola 40+ Google Forms untuk pengumpulan data (seperti alamat domisili, status pajak, ukuran seragam) yang terintegrasi dengan dropdown otomatis berbasis Google Sheets via Apps Script.</li>
-                    <li><strong>Perencanaan &amp; Penjadwalan:</strong> Menyusun Rencana Kerja (Master Plan) keamanan bulanan/mingguan serta memasukkan jadwal shift bulanan untuk 150 personel di 10 gedung operasional ke dalam format CSV terstruktur.</li>
-                    <li><strong>Manajemen Absensi &amp; Payroll:</strong> Melakukan entri data kehadiran harian dan perhitungan lembar kerja bulanan (timesheet) secara konsisten selama 81 bulan berturut-turut (Sept 2019-Mei 2026) sebagai dasar penentuan payroll.</li>
-                    <li><strong>Pemantauan &amp; Pelaporan:</strong> Menyusun berbagai laporan keamanan berkala meliputi Laporan Pemantauan CCTV, Laporan Patroli Sapu Jagat, Laporan Aktivitas, dan Laporan Resume Bulanan dengan saran taktis untuk evaluasi manajemen.</li>
-                    <li><strong>Pengembangan Aplikasi Internal &amp; Digitalisasi:</strong> Merancang, membangun, dan mengelola SMP-JDC (Sistem Manajemen Keamanan JDC), aplikasi all-in-one yang aktif berjalan dengan 21 pengguna harian aktif (tim security) berbasis React 18 + Firebase dengan Capacitor untuk Android native. Fitur meliputi patroli QR (26 titik), pelaporan real-time ke dashboard Admin/SPV/Manajemen (menggantikan buku mutasi fisik), tiket komplain QR tanpa login untuk pengunjung/tenant, pelacakan GPS anti-fraud, backup offline, dan tombol SOS darurat dengan sirine.</li>
+                    <li><strong>Data Entry &amp; Database Management:</strong> Entered and maintained the database for over 150 personnel (covering NIK, positions, assignments, NPWP, BPJS, and pension data) in a structured manner and designed operational Organizational Structures for the team.</li>
+                    <li><strong>Google Forms &amp; Automation:</strong> Designed and managed 40+ Google Forms for data collection (such as domicile address, tax status, uniform size) integrated with automatic dropdowns based on Google Sheets via Apps Script.</li>
+                    <li><strong>Planning &amp; Scheduling:</strong> Formulated monthly/weekly security Master Plans and inputted monthly shift schedules for 150 personnel across 10 operational buildings into structured CSV format.</li>
+                    <li><strong>Attendance &amp; Payroll Management:</strong> Conducted daily attendance data entry and monthly timesheet calculation consistently for 81 consecutive months (Sept 2019–May 2026) as the basis for payroll determination.</li>
+                    <li><strong>Monitoring &amp; Reporting:</strong> Compiled various periodic security reports including CCTV Monitoring Reports, Patroli Sapu Jagat Reports, Activity Reports, and Monthly Resume Reports with tactical recommendations for management evaluation.</li>
+                    <li><strong>In-House App Development &amp; Digitalization:</strong> Designed, built, and managed SMP-JDC (Security Management System), an all-in-one application currently running live with 21+ daily active users (security team) based on React 18 + Firebase with Capacitor for Android native. Features include QR barcode patrol (26 checkpoints), real-time reporting to Admin/SPV/Management dashboards (replacing manual logbooks), visitor/tenant/showroom QR complaints without login, GPS anti-fraud tracking, offline backup, and a SOS emergency siren.</li>
                 </ul>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Administrasi Divisi Keamanan &amp; Data Entry</span>
-                    <span class="item-meta">2019 – 2021 | PT. Provices Indonesia — Apartemen The Wave, Jakarta Selatan</span>
+                    <span class="item-title-company">Security Division Administration</span>
+                    <span class="item-meta">2019 – 2021 | PT. Provices Indonesia — The Wave Apartment, South Jakarta</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Entri Data Personel:</strong> Melakukan entri dan pemeliharaan basis data untuk 30+ personel keamanan (KTA, BPJS, status vaksinasi, inventaris seragam) selama 2 tahun.</li>
-                    <li><strong>Perhitungan Absensi &amp; Timesheet:</strong> Memproses data kehadiran harian dan perhitungan timesheet bulanan untuk mendukung kelancaran penggajian.</li>
-                    <li><strong>Penyusunan Laporan Berkala:</strong> Menyusun lebih dari 45 laporan mingguan dan 20 laporan bulanan untuk diserahkan sebagai bahan evaluasi manajemen properti.</li>
-                    <li><strong>Pencatatan Inventaris:</strong> Melakukan dokumentasi dan entri data inventaris secara sistematis, termasuk serah terima seragam, logistik barang masuk, dan peralatan operasional.</li>
+                    <li><strong>Data Entry Personnel:</strong> Entered and maintained personnel database (IDs, BPJS, vaccines, uniforms) for 30+ security members.</li>
+                    <li><strong>Timesheet &amp; Attendance:</strong> Daily attendance entry and monthly timesheet processing for payroll support.</li>
+                    <li><strong>Reporting:</strong> Compiled 45+ weekly and 20+ monthly operational reports for property management evaluation.</li>
+                    <li><strong>Inventory Data Entry:</strong> Recorded uniform handover, incoming goods, and equipment documentation.</li>
                 </ul>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">Petugas Keamanan (Security Guard)</span>
-                    <span class="item-meta">2018 – 2019 | PT. Uremessing Guard — Rasuna Said Kav. 18, Jakarta Selatan</span>
+                    <span class="item-title-company">Security Guard</span>
+                    <span class="item-meta">2018 – 2019 | PT. Uremessing Guard — Department 18th Rasuna Said, South Jakarta</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Keamanan Operasional:</strong> Mengatur alur penerimaan tamu, mengawasi titik akses masuk gedung, dan menegakkan protokol keamanan area.</li>
-                    <li><strong>Pencegahan Insiden:</strong> Melakukan patroli terjadwal di seluruh area gedung untuk memastikan situasi kondusif dan mencegah potensi gangguan keamanan.</li>
-                    <li><strong>Pelaporan Harian:</strong> Menyusun dan mengirimkan buku log keamanan harian serta ringkasan insiden melalui saluran digital yang terkoordinasi.</li>
+                    <li><strong>Operations Security:</strong> Managed guest reception, secured access points, and enforced building security protocols.</li>
+                    <li><strong>Incident Prevention:</strong> Monitored building premises through structured patrols to prevent safety disturbances.</li>
+                    <li><strong>Reporting:</strong> Reported daily security logs and incident briefs via coordinated digital channels.</li>
                 </ul>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2 class="section-title">Proyek Web &amp; Aplikasi yang Dikembangkan</h2>
+            <h2 class="section-title">Developed Web &amp; App Projects</h2>
             
             <div class="project-item">
-                <div class="project-title">SMP-JDC — Aplikasi Patroli Barcode, Pelaporan &amp; Tiket Komplain Real-time</div>
+                <div class="project-title">SMP-JDC — Barcode Patrol, Real-time Reporting &amp; QR Complaint App</div>
                 <p class="project-desc">
                     <strong>Tech Stack:</strong> React 18, Vite, Firebase Firestore (real-time), Apache Capacitor (Android native), html5-qrcode, Lucide React, CSS3<br>
                     <strong>Link:</strong> <a href="https://rihard-cyber.github.io/SMP-JDC/" target="_blank">rihard-cyber.github.io/SMP-JDC/</a><br>
-                    Aplikasi all-in-one yang aktif berjalan di Jakarta Design Center dengan 21+ pengguna harian aktif (tim security). Fungsi utama: (1) Patroli barcode (scan QR di 26 titik); (2) Pelaporan real-time kejadian/kendala ke dashboard Admin/SPV/Manajemen (pengganti buku mutasi); (3) Tiket komplain QR pengunjung/tamu/tenant/sorum tanpa login. Dilengkapi GPS anti-fraud, SOS sirine darurat, backup offline, dan build Android native via Capacitor.
+                    All-in-one application currently running live at Jakarta Design Center with 21+ daily active users (security team). Key functions: (1) Barcode patrol (QR scan at 26 checkpoints); (2) Real-time incident/issue reporting to Admin/SPV/Management dashboard (replacing manual logs); (3) Visitor/tenant/showroom QR complaint tickets without login. Equipped with GPS anti-fraud, emergency SOS siren, offline backup, and Android native build via Capacitor.
                 </p>
             </div>
 
             <div class="project-item">
-                <div class="project-title">Website Profil Perusahaan — PT. Citra Dermaga Perkasa Logistik</div>
+                <div class="project-title">Company Profile Website — PT. Citra Dermaga Perkasa Logistik</div>
                 <p class="project-desc">
                     <strong>Tech Stack:</strong> HTML5, CSS3, Vanilla JavaScript, GitHub Pages (Deployment)<br>
                     <strong>Link:</strong> <a href="https://rihard-cyber.github.io/website-PT.-Citra-Dermaga-Perkasa-Logistik/" target="_blank">rihard-cyber.github.io/website-PT.-Citra-Dermaga-Perkasa-Logistik/</a><br>
-                    Website profil perusahaan resmi untuk bisnis logistik maritim dan pengiriman barang. Struktur A-Z meliputi: Frontend responsif yang dirancang dengan HTML5 &amp; CSS3 modern untuk menampilkan armada dan layanan pengiriman logistik, Vanilla JS untuk navigasi dan galeri interaktif, serta di-deploy menggunakan GitHub Pages. Berguna meningkatkan kehadiran digital dan kredibilitas bisnis logistik perusahaan.
+                    Official corporate profile website for maritime logistics and freight transport business. A-Z structure: Responsive frontend built with modern HTML5 &amp; CSS3 to showcase fleet and services, Vanilla JS for interactive navigation and fleet galleries, and hosted via GitHub Pages. Boosts the company's digital presence and business credibility.
                 </p>
             </div>
 
             <div class="project-item">
-                <div class="project-title">AI Asisten Bahasa Inggris</div>
+                <div class="project-title">AI English Assistant</div>
                 <p class="project-desc">
                     <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (ES6+), REST API Integration<br>
-                    Aplikasi edukasi percakapan interaktif (Conversational AI chatbot) untuk pelatihan bahasa Inggris. Struktur A-Z meliputi: UI minimalis futuristik berbasis Glassmorphism, integrasi API kecerdasan buatan (LLM) untuk respons tata bahasa secara real-time, modul voice-to-text untuk latihan berbicara (pronunciation), dan penyimpanan riwayat obrolan (chat history) lokal. Berguna sebagai asisten belajar bahasa Inggris mandiri yang adaptif.
+                    An interactive conversational AI chatbot app for English training. Structure from A to Z includes: Futuristic minimalist Glassmorphism UI, integration with AI language models (LLM) for real-time grammar checks and responses, voice-to-text module for pronunciation practice, and local chat history preservation. Serves as an adaptive English self-learning assistant.
                 </p>
             </div>
- 
+
             <div class="project-item">
                 <div class="project-title">SaaS HRIS Si Presensi</div>
                 <p class="project-desc">
                     <strong>Tech Stack:</strong> React 18, Vite, Firebase, LeafletJS (Geofencing), CSS3<br>
-                    Sistem Informasi Manajemen Absensi &amp; HRIS Digital. Struktur A-Z meliputi: Peta presensi berbasis GPS (Geofencing) menggunakan LeafletJS untuk membatasi radius absen karyawan, kamera capture kehadiran anti-mock GPS, dashboard admin untuk rekap data kehadiran harian dan perhitungan lembur otomatis, serta fitur ekspor laporan bulanan ke format Excel/CSV. Mempercepat rekonsiliasi data kehadiran 150+ personel.
+                    A Digital HRIS and Attendance Management Information System. Structure from A to Z includes: GPS-based geofencing map using LeafletJS to restrict employee attendance radius, camera capture for anti-mock GPS verification, admin dashboard for daily attendance summaries and automated overtime calculation, and monthly report export in Excel/CSV formats. Streamlines monthly attendance reconciliation for 150+ personnel.
                 </p>
             </div>
- 
+
             <div class="project-item">
-                <div class="project-title">E-Commerce &amp; Profil Apotek</div>
+                <div class="project-title">Pharmacy E-Commerce &amp; Profile</div>
                 <p class="project-desc">
                     <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (ES6+), WhatsApp API Integration<br>
-                    Situs e-commerce dan profil apotek interaktif berfitur lengkap. Struktur A-Z meliputi: Frontend dengan HTML5, CSS3, dan Vanilla JavaScript untuk UI modern, sistem keranjang belanja (cart) dinamis yang menghitung otomatis total harga obat, integrasi langsung pengiriman pesanan (checkout) terstruktur ke WhatsApp apoteker, dan peta lokasi interaktif. Berguna mendigitalisasi transaksi penjualan apotek fisik secara instan.
+                    A fully-featured interactive pharmacy profile and e-commerce website. Structure from A to Z includes: Responsive frontend styled with HTML5, CSS3, and Vanilla JavaScript, a dynamic shopping cart system that automatically calculates total medicine prices, direct integration to forward structured checkout details to the pharmacist's WhatsApp, and an interactive location map. Designed to instantly digitize physical pharmacy sales transactions.
                 </p>
             </div>
- 
+
             <div class="project-item">
                 <div class="project-title">JDC Secure Parking System</div>
                 <p class="project-desc">
                     <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (ES6+), Local Storage<br>
-                    Sistem Manajemen Parkir Digital &amp; Reservasi Slot Keamanan. Struktur A-Z meliputi: Frontend dashboard responsif untuk admin parkir, logika pengecekan ketersediaan slot parkir secara real-time, generator kode QR tiket parkir unik, validasi transaksi parkir aman, dan rekapitulasi data kendaraan masuk-keluar untuk audit keamanan. Dirancang menggunakan HTML, CSS, JavaScript, dan penyimpanan berbasis local/session storage.
+                    A digital parking management and security slot reservation system. Structure from A to Z includes: Responsive frontend dashboard for parking administrators, real-time parking slot availability logic, unique parking ticket QR code generator, secure transaction validation, and vehicle entry-exit log aggregation for security audits. Built using HTML, CSS, JavaScript, and local/session storage.
                 </p>
             </div>
         </section>
 
         <!-- Education Section -->
         <section id="education">
-            <h2 class="section-title">Pendidikan</h2>
+            <h2 class="section-title">Education</h2>
             
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">S1 Teknik Informatika (Berjalan)</span>
-                    <span class="item-meta">2024 – Sekarang | Universitas Siber Muhammadiyah</span>
+                    <span class="item-title-company">Bachelor of Informatics Engineering (Ongoing)</span>
+                    <span class="item-meta">2024 – Present | Universitas Siber Muhammadiyah</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Area Fokus:</strong> Dasar-dasar rekayasa perangkat lunak, basis data, jaringan, dan pengembangan aplikasi web modern.</li>
+                    <li><strong>Focus Area:</strong> Software engineering fundamentals, databases, networking, and modern web application development.</li>
                     <li>
-                        <strong>Bidang Utama yang Dipelajari:</strong> 
-                        <span class="checkmark">✔</span> Pemrograman &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Ekosistem React &nbsp;&nbsp;&nbsp;&nbsp;
+                        <strong>Key Areas Explored:</strong> 
+                        <span class="checkmark">✔</span> Programming &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> React Ecosystem &nbsp;&nbsp;&nbsp;&nbsp;
                         <span class="checkmark">✔</span> Linux &amp; Git &nbsp;&nbsp;&nbsp;&nbsp;
                         <span class="checkmark">✔</span> Relational Databases &nbsp;&nbsp;&nbsp;&nbsp;
                         <span class="checkmark">✔</span> GitHub Actions
@@ -537,36 +539,36 @@
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">S1 Manajemen (Berjalan)</span>
-                    <span class="item-meta">2024 – Sekarang | STIE Tunas Nusantara</span>
+                    <span class="item-title-company">Bachelor of Management (Ongoing)</span>
+                    <span class="item-meta">2024 – Present | STIE Tunas Nusantara</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Area Fokus:</strong> Logistik operasional, kepemimpinan, perilaku organisasi, manajemen bisnis strategis, dan administrasi.</li>
+                    <li><strong>Focus Area:</strong> Operational logistics, leadership, organizational behavior, strategic business management, and administration.</li>
                     <li>
-                        <strong>Bidang Utama yang Dipelajari:</strong> 
-                        <span class="checkmark">✔</span> Operasional &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Sumber Daya Manusia &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Logistik &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Kepemimpinan &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Manajemen Risiko
+                        <strong>Key Areas Explored:</strong> 
+                        <span class="checkmark">✔</span> Operations &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Human Resources &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Logistics &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Leadership &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Risk Management
                     </li>
                 </ul>
             </div>
 
             <div class="item-block">
                 <div class="item-header">
-                    <span class="item-title-company">S1 Ekonomi Syariah (S.E.)</span>
+                    <span class="item-title-company">Bachelor of Islamic Economics (S.E.)</span>
                     <span class="item-meta">2021 – 2024 | STEBIS NUR ILMI AL-ISMAILIYUN</span>
                 </div>
                 <ul class="bullets">
-                    <li><strong>Keunggulan Akademik:</strong> Lulus dengan <strong>IPK tinggi 3.8 / 4.0</strong>.</li>
+                    <li><strong>Academic Excellence:</strong> Graduated with a high <strong>GPA of 3.8 / 4.0</strong>.</li>
                     <li>
-                        <strong>Mata Kuliah Relevan:</strong> 
-                        <span class="checkmark">✔</span> Administrasi &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Manajemen &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Operasional &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Akuntansi Dasar &nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="checkmark">✔</span> Komunikasi Bisnis
+                        <strong>Relevant Coursework:</strong> 
+                        <span class="checkmark">✔</span> Administration &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Management &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Operations &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Basic Accounting &nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="checkmark">✔</span> Business Communication
                     </li>
                 </ul>
             </div>
@@ -574,60 +576,60 @@
 
         <!-- Professional Certificates & Achievements -->
         <section id="certificates">
-            <h2 class="section-title">Sertifikat &amp; Kredensial</h2>
+            <h2 class="section-title">Certificates &amp; Credentials</h2>
             
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikasi Digital Marketing BNSP (CDM) / 2026</span> — 
-                <span class="cert-issuer">Badan Nasional Sertifikasi Profesi (BNSP) / LKP Novasa</span>. 
-                (Dasar Pemasaran Digital, SEO, SEM, Media Sosial, Pemasaran Konten, Analitik).
+                • <span class="cert-title-year">BNSP Digital Marketing Certification (CDM) / 2026</span> — 
+                <span class="cert-issuer">National Professional Certification Agency (BNSP) / LKP Novasa</span>. 
+                (Digital Marketing Fundamentals, SEO, SEM, Social Media, Content Marketing, Analytics).
             </div>
 
             <div class="cert-item">
                 • <span class="cert-title-year">Certified Public Speaking (CPS) / 2026</span> — 
                 <span class="cert-issuer">LKP WellldoneSkills Nawara Pratama</span>. 
-                (Public Speaking, Komunikasi Efektif, Keterampilan Presentasi).
+                (Public Speaking, Effective Communication, Presentation Skills).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikat Microsoft Office / 2024</span> — 
+                • <span class="cert-title-year">Microsoft Office Certificate / 2024</span> — 
                 <span class="cert-issuer">Borju Digital &amp; Digital Course LKP</span>. 
-                (Manajemen Data, Pelaporan Administratif, Dokumentasi Profesional, Pengembangan Presentasi, &amp; Operasional Kantor Digital).
+                (Data Management, Administrative Reporting, Professional Documentation, Presentation Development, &amp; Digital Office Operations).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikat Digital Marketing: Copywriting / 2024</span> — 
+                • <span class="cert-title-year">Digital Marketing Certificate: Copywriting / 2024</span> — 
                 <span class="cert-issuer">Belajar Skill</span>. 
-                (Copywriting, Penulisan Konten, Dasar SEO, Kampanye Promosi).
+                (Copywriting, Content Writing, SEO Basics, Promotional Campaigns).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Admin Microsoft Office / 2021</span> — 
+                • <span class="cert-title-year">Microsoft Office Admin / 2021</span> — 
                 <span class="cert-issuer">Sans Smart</span>. 
-                (Administrasi Perkantoran, Pengolahan Data Excel, Surat &amp; Dokumen, Arsip Digital).
+                (Office Administration, Excel Data Processing, Letters &amp; Documents, Digital Archives).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikat Bela Diri Karate / 2020</span> — 
+                • <span class="cert-title-year">Karate Martial Arts Certificate / 2020</span> — 
                 <span class="cert-issuer">PT. Provices Group</span>. 
-                (Bela Diri, Ketahanan Mental, Refleks, Manajemen Konflik).
+                (Self-Defense, Mental Endurance, Reflexes, Conflict Management).
             </div>
 
             <div class="cert-item">
-                • <span class="cert-title-year">Sertifikat Gada Pratama / 2019</span> — 
+                • <span class="cert-title-year">Gada Pratama Certificate / 2019</span> — 
                 <span class="cert-issuer">PT. Evan Putra Jaya</span>. 
-                (Operasi Keamanan Dasar, Kontrol Akses, Prosedur Darurat, SOP).
+                (Basic Security Operations, Access Control, Emergency Procedures, SOP).
             </div>
         </section>
 
         <!-- Detailed Contact Info (Matches image layout) -->
         <section id="contact-info-footer">
-            <h2 class="section-title">Info Kontak</h2>
+            <h2 class="section-title">Contact Info</h2>
             <div class="footer-info">
                 <table>
                     <tr>
-                        <td class="label">Telepon:</td>
+                        <td class="label">Phone:</td>
                         <td>+62 858-8810-2696</td>
-                        <td class="label">Alamat:</td>
+                        <td class="label">Address:</td>
                         <td>Jl. Babelan, Kelurahan Bahagia, Bekasi, Jawa Barat</td>
                     </tr>
                     <tr>
@@ -637,8 +639,8 @@
                         <td>https://www.linkedin.com/in/richard-patung-landu-meha-9099a3259</td>
                     </tr>
                     <tr>
-                        <td class="label">Portofolio:</td>
-                        <td colspan="3">https://rihard-cyber.github.io/</td>
+                        <td class="label">Portfolio:</td>
+                        <td colspan="3">https://rihard-cyber.github.io/richard-portfoliofulleng/</td>
                     </tr>
                 </table>
             </div>

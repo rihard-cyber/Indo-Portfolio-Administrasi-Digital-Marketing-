@@ -358,9 +358,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Toggle text
                 if (content.classList.contains('expanded')) {
-                    button.innerText = 'Tampilkan Lebih Sedikit';
+                    button.innerText = 'Show Less';
                 } else {
-                    button.innerText = 'Baca Selengkapnya';
+                    button.innerText = 'Read More';
                 }
             }
         });
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const expStatEl = document.getElementById('stat-experience');
     if (expStatEl) {
         const yearsOfExp = Math.max(1, currentYear - startYear);
-        const label = expStatEl.getAttribute('data-label') || '+ Tahun';
+        const label = expStatEl.getAttribute('data-label') || '+ Years';
         expStatEl.innerText = `${yearsOfExp}${label}`;
     }
 
@@ -554,20 +554,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('formMessage').value.trim();
 
             if (!name || !email || !message) {
-                formStatus.textContent = 'Harap isi semua kolom.';
+                formStatus.textContent = 'Please fill in all fields.';
                 formStatus.className = 'form-status error';
                 return;
             }
 
             if (!email.includes('@') || !email.includes('.')) {
-                formStatus.textContent = 'Harap masukkan alamat email yang valid.';
+                formStatus.textContent = 'Please enter a valid email address.';
                 formStatus.className = 'form-status error';
                 return;
             }
 
             const btn = contactForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="ph ph-spinner" style="margin-right:8px;animation:spin 1s linear infinite;"></i>Mengirim...';
+            btn.innerHTML = '<i class="ph ph-spinner" style="margin-right:8px;animation:spin 1s linear infinite;"></i>Sending...';
             btn.disabled = true;
 
             try {
@@ -579,14 +579,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    formStatus.textContent = 'Pesan berhasil dikirim! Saya akan segera menghubungi Anda kembali.';
+                    formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
                     formStatus.className = 'form-status';
                     contactForm.reset();
                 } else {
                     throw new Error('Failed to send');
                 }
             } catch {
-                formStatus.textContent = 'Pesan tidak dapat dikirim. Silakan email saya langsung di richardpl.meha@gmail.com';
+                formStatus.textContent = 'Could not send message. Please email me directly at richardpl.meha@gmail.com';
                 formStatus.className = 'form-status error';
             }
 
