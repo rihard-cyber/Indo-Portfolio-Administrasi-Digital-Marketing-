@@ -295,20 +295,30 @@
 
         /* Print Media Queries */
         @media print {
-            body {
+            @page {
+                margin: 15mm 10mm;
+                size: A4;
+            }
+
+            html, body {
                 background-color: var(--bg-canvas) !important;
-                padding: 0;
+                padding: 0 !important;
+                margin: 0 !important;
                 color: var(--text-primary) !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                font-size: 10pt;
+                line-height: 1.35;
+                display: block !important;
+                min-height: auto !important;
             }
 
             .cv-paper {
                 background-color: var(--bg-paper) !important;
                 box-shadow: none;
-                padding: 30px 40px;
-                width: 100%;
+                padding: 20px 25px;
                 max-width: 100%;
+                width: 100%;
                 min-height: auto;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
@@ -329,28 +339,109 @@
                 --border-color: #1a1a1a;
             }
 
+            header {
+                margin-bottom: 8px;
+            }
+
+            .name {
+                font-size: 1.6rem;
+            }
+
+            .contact-info {
+                font-size: 0.7rem;
+            }
+
+            section {
+                margin-bottom: 10px;
+            }
+
+            .section-title {
+                font-size: 1rem;
+                margin-bottom: 5px;
+            }
+
+            .summary-text {
+                font-size: 0.75rem;
+                margin-bottom: 8px;
+            }
+
             .highlight-bar {
                 background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%) !important;
                 border-left-color: var(--accent-color) !important;
+                font-size: 0.72rem;
+                padding: 5px 10px;
+                margin-bottom: 10px;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                page-break-inside: avoid;
             }
 
             .badge {
                 background-color: var(--badge-bg) !important;
                 color: var(--badge-text) !important;
                 border: 1px solid #cbd5e1 !important;
+                font-size: 0.65rem;
+                padding: 2px 7px;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
-            
+
+            .badge-grid {
+                gap: 4px;
+                margin-bottom: 6px;
+            }
+
             .checkmark {
                 color: #16a34a !important;
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
-            #experience, #projects, #education {
+            .item-block {
+                margin-bottom: 8px;
+                page-break-inside: avoid;
+            }
+
+            .item-header {
+                font-size: 0.78rem;
+            }
+
+            ul.bullets {
+                font-size: 0.72rem;
+                margin-left: 16px;
+                margin-bottom: 4px;
+            }
+
+            ul.bullets li {
+                margin-bottom: 1px;
+            }
+
+            .project-item {
+                page-break-inside: avoid;
+                margin-bottom: 6px;
+            }
+
+            .project-title {
+                font-size: 0.75rem;
+            }
+
+            .project-desc {
+                font-size: 0.72rem;
+            }
+
+            .cert-item {
+                font-size: 0.72rem;
+                margin-bottom: 3px;
+                page-break-inside: avoid;
+            }
+
+            .footer-info {
+                font-size: 0.7rem;
+                padding-top: 4px;
+                margin-top: 8px;
+            }
+
+            #experience, #projects {
                 page-break-before: always;
             }
         }
